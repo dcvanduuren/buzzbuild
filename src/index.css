@@ -117,6 +117,7 @@ body {
 }
 
 .glass-card {
+  padding: 40px;
   background: rgba(15, 20, 30, 0.55);
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
@@ -323,6 +324,162 @@ body {
     right: 0;
   }
 }
+
+/* ========================================= */
+/* RESPONSIVE UTILITIES & MOBILE LAYOUT     */
+/* ========================================= */
+
+.responsive-grid {
+  display: grid;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-title {
+  font-size: 5rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.mission-title {
+  font-size: 3rem;
+  font-weight: normal;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.mission-subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+.carousel-card-width {
+  width: 400px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.mission-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+
+  /* Grids collapse to 1 column */
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Typography scales down */
+  .hero-title {
+    font-size: 3.5rem;
+    justify-content: center;
+  }
+
+  .mission-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .mission-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+  }
+
+  #hero {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  #hero .container {
+    text-align: center;
+  }
+
+  /* Paddings scale down */
+  .section-padding {
+    padding: 50px 0 !important;
+  }
+
+  .mission-padding {
+    padding: 50px 0 !important;
+  }
+
+  /* Stack buttons */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  /* Carousel */
+  .carousel-card-width {
+    width: 85vw !important;
+  }
+
+  /* Generic padding cuts */
+  .glass-card {
+    padding: 24px !important;
+  }
+
+  .project-card {
+    aspect-ratio: 4/5;
+  }
+
+  /* Header adjustments */
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
 
 .carousel-container {
   width: 100%;

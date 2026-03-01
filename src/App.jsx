@@ -54,11 +54,11 @@ const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }) => (
 );
 
 const Hero = ({ t, handleNavClick }) => (
-  <section id="hero" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingTop: '40px' }}>
+  <section id="hero" className="hero-padding" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
     <div className="container">
       {/* Stylized Logo Title */}
       <div style={{ marginBottom: '24px' }}>
-        <h1 className="title-font" style={{ fontSize: '5rem', letterSpacing: '0.02em', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', margin: 0 }}>
+        <h1 className="title-font hero-title" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
           <span style={{ color: 'var(--accent-primary)' }}>Buzz</span>
           <span style={{ color: 'var(--text-main)' }}>build</span>
         </h1>
@@ -68,7 +68,7 @@ const Hero = ({ t, handleNavClick }) => (
         {t.hero.title}
       </p>
 
-      <div style={{ display: 'flex', gap: '16px', justifyContent: 'flex-start', marginBottom: '80px' }}>
+      <div className="hero-buttons">
         <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} className="btn btn-primary" style={{ borderRadius: '8px' }}>
           {t.hero.btnServices}
         </a>
@@ -87,15 +87,15 @@ const Hero = ({ t, handleNavClick }) => (
 );
 
 const Mission = ({ t }) => (
-  <section id="missie" style={{ padding: '100px 0' }}>
+  <section id="missie" className="mission-padding">
     <div className="container" style={{ display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap' }}>
 
       {/* Left side: Text */}
       <div style={{ flex: '1 1 500px' }}>
-        <h2 className="title-font" style={{ fontSize: '3rem', fontWeight: 'normal', color: 'var(--text-main)', marginBottom: '16px', lineHeight: '1.1' }}>
+        <h2 className="title-font mission-title">
           {t.mission.title}
         </h2>
-        <h3 className="text-accent" style={{ fontSize: '1.4rem', fontWeight: '500', marginBottom: '32px' }}>
+        <h3 className="text-accent mission-subtitle">
           {t.mission.subtitle}
         </h3>
         <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', opacity: 0.9, lineHeight: '1.7', margin: 0 }}>
@@ -154,18 +154,17 @@ const Values = ({ t }) => {
   ];
 
   return (
-    <section id="waarden" style={{ padding: '80px 0' }}>
+    <section id="waarden" className="section-padding">
       <div className="container">
         <div className="section-header text-center">
           <h2>{t.values.title}</h2>
           <p className="subtext">{t.values.subtitle}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+        <div className="responsive-grid grid-3" style={{ gap: '20px' }}>
           {cardData.map((card, index) => (
             <div key={index} className="glass-card" style={{
               borderRadius: 'var(--radius-md)',
-              padding: '40px',
             }}>
               <h3 className="text-accent" style={{ fontSize: '1.1rem', marginBottom: '24px', fontWeight: '600' }}>
                 {card.title}
@@ -234,14 +233,14 @@ const Projects = ({ t }) => {
   };
 
   return (
-    <section id="projecten" style={{ padding: '80px 0' }}>
+    <section id="projecten" className="section-padding">
       <div className="container">
         <div className="section-header text-center">
           <h2>{t.projects.title}</h2>
           <p className="subtext" style={{ color: 'var(--text-muted)' }}>{t.projects.subtitle}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+        <div className="responsive-grid grid-2" style={{ gap: '24px' }}>
           {projectData.map((project) => (
             <div key={project.id} className="project-card" onClick={() => openProject(project)}>
               <img
@@ -300,7 +299,7 @@ const Testimonials = ({ t }) => {
   const seamlessReviews = [...reviews, ...reviews];
 
   return (
-    <section style={{ padding: '80px 0', overflow: 'hidden' }}>
+    <section className="section-padding" style={{ overflow: 'hidden' }}>
       <div className="container">
         <div className="section-header text-center">
           <h2>{t.testimonials.title}</h2>
@@ -310,13 +309,11 @@ const Testimonials = ({ t }) => {
         <div className="carousel-container">
           <div className="carousel-track">
             {seamlessReviews.map((item, index) => (
-              <div key={`${item}-${index}`} className="glass-card" style={{
+              <div key={`${item}-${index}`} className="glass-card carousel-card-width" style={{
                 borderRadius: 'var(--radius-md)',
-                padding: '30px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '16px',
-                width: '400px',
                 flexShrink: 0
               }}>
                 <div style={{ display: 'flex', gap: '4px' }}>
@@ -336,14 +333,14 @@ const Testimonials = ({ t }) => {
 };
 
 const Services = ({ t, mailtoLink }) => (
-  <section id="diensten" style={{ padding: '80px 0' }}>
+  <section id="diensten" className="section-padding">
     <div className="container">
       <div className="section-header text-center">
         <h2 style={{ fontSize: '2.5rem' }}>{t.services.title}</h2>
         <p className="subtext" style={{ color: 'var(--text-main)', fontSize: '0.95rem' }}>{t.services.subtitle}</p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', maxWidth: '1000px', margin: '0 auto' }}>
+      <div className="responsive-grid grid-2" style={{ gap: '24px', maxWidth: '1000px', margin: '0 auto' }}>
         {/* Hourly Card */}
         <div className="glass-card" style={{
           borderRadius: 'var(--radius-md)',
@@ -415,14 +412,14 @@ const Services = ({ t, mailtoLink }) => (
 );
 
 const Team = ({ t }) => (
-  <section id="over" style={{ padding: '80px 0' }}>
+  <section id="over" className="section-padding">
     <div className="container">
       <div className="section-header text-center">
         <h2>{t.team.title}</h2>
         <p className="subtext" style={{ color: 'var(--text-main)', fontSize: '0.95rem' }}>Ontmoet ons team dat met trots en vakmanschap jouw badkamer en huis transformeert.</p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', maxWidth: '800px', margin: '0 auto' }}>
+      <div className="responsive-grid grid-2" style={{ gap: '24px', maxWidth: '800px', margin: '0 auto' }}>
         {/* Profile 1 */}
         <div style={{
           borderRadius: 'var(--radius-md)',
