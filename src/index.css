@@ -380,105 +380,7 @@ body {
   padding: 100px 0;
 }
 
-@media (max-width: 768px) {
 
-  /* Grids collapse to 1 column */
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  /* Typography scales down */
-  .hero-title {
-    font-size: 3.5rem;
-    justify-content: center;
-  }
-
-  .mission-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-
-  .mission-subtitle {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 2.2rem !important;
-  }
-
-  #hero {
-    align-items: center !important;
-    text-align: center;
-  }
-
-  #hero .container {
-    text-align: center;
-  }
-
-  /* Paddings scale down */
-  .section-padding {
-    padding: 50px 0 !important;
-  }
-
-  .mission-padding {
-    padding: 50px 0 !important;
-  }
-
-  /* Stack buttons */
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    width: 100%;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-  }
-
-  /* Carousel */
-  .carousel-card-width {
-    width: 85vw !important;
-  }
-
-  /* Generic padding cuts */
-  .glass-card {
-    padding: 24px !important;
-  }
-
-  .project-card {
-    aspect-ratio: 4/5;
-  }
-
-  /* Header adjustments */
-  .header-content {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .main-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  /* Footer adjustments */
-  .footer-content {
-    flex-direction: column;
-    gap: 32px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-right {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-}
 
 
 .carousel-container {
@@ -612,6 +514,28 @@ section {
   color: var(--accent-primary);
 }
 
+.lang-toggle {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all var(--transition-normal);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.wa-icon-wrapper svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* Header Navbar */
 .header {
   position: sticky;
@@ -738,4 +662,159 @@ ul.bullet-list li {
   flex-direction: column;
   gap: 16px;
   align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+
+  /* Grids collapse to 1 column */
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Typography scales down */
+  .hero-title {
+    font-size: 3.5rem;
+    justify-content: center;
+  }
+
+  .mission-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .mission-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+  }
+
+  #hero {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .hero-container {
+    align-items: center !important;
+  }
+
+  .hero-title-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Paddings scale down */
+  .section-padding {
+    padding: 50px 0 !important;
+  }
+
+  .mission-padding {
+    padding: 50px 0 !important;
+  }
+
+  /* Stack buttons */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  /* Carousel */
+  .carousel-card-width {
+    width: 85vw !important;
+  }
+
+  /* Generic padding cuts */
+  .glass-card {
+    padding: 24px !important;
+  }
+
+  .project-card {
+    aspect-ratio: 4/5;
+  }
+
+  /* Header adjustments */
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    padding: 0 16px;
+  }
+
+  /* Hamburger and Dropdown */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    /* Below header */
+    left: 0;
+    right: 0;
+    background: rgba(7, 28, 46, 0.95);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+  }
+
+  .main-nav.mobile-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    font-size: 1.2rem;
+    padding: 12px 0;
+  }
+
+  /* Right-side alignment */
+  .header-actions {
+    gap: 12px;
+  }
+
+  .lang-toggle {
+    padding: 4px 8px;
+  }
+
+  .wa-btn {
+    padding: 8px !important;
+  }
+
+  .wa-text {
+    display: none;
+  }
+
+  .wa-icon-wrapper svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
