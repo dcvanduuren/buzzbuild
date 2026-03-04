@@ -8,14 +8,14 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Aannemersbedrijf gespecialiseerd in hoogwaardige Badkamerrenovaties – Betrouwbaar, Transparant, Creatief.',
+            title: 'Hét aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken – Betrouwbaar, Transparant, Creatief.',
             btnServices: 'Onze diensten',
             btnWork: 'Ons werk'
         },
         mission: {
             title: 'Allround aannemersbedrijf. Persoonlijke aanpak.',
-            subtitle: 'Gespecialiseerd in hoogwaardige badkamerrenovaties.',
-            body: 'Bij Buzzbuild pakken we elk project met dezelfde toewijding aan. Wij combineren onze brede bouwexpertise met een specifieke, scherpe focus op badkamers. Voor jou betekent dit: één betrouwbaar aanspreekpunt voor het hele huis, eerlijk advies en een feilloze afwerking van jouw droombadkamer.'
+            subtitle: 'Gespecialiseerd in hoogwaardige badkamerrenovaties in regio Eindhoven.',
+            body: 'Bij Buzzbuild pakken we elk renovatieproject met dezelfde toewijding aan. Wij combineren onze brede bouwexpertise met een specifieke, scherpe focus op badkamers. Voor jou in Eindhoven (en omstreken) betekent dit: één betrouwbare aannemer voor het hele huis, eerlijk advies en een feilloze afwerking van jouw droombadkamer.'
         },
         values: {
             title: 'Onze kernwaarden.',
@@ -38,7 +38,7 @@ export const translations = {
         },
         services: {
             title: 'Onze diensten.',
-            subtitle: 'Van het transformeren van je badkamer tot een volledige woningrenovatie, wij bieden duidelijke en eerlijke prijsopties.',
+            subtitle: 'Van het transformeren van je badkamer tot een volledige woningrenovatie in Eindhoven, wij bieden duidelijke en eerlijke prijsopties.',
             btnEmail: 'E-mail ons',
             card1: {
                 title: 'Uurbasis',
@@ -60,7 +60,7 @@ export const translations = {
                 proces: 'Proces',
                 werk: 'Werk',
                 diensten: 'Diensten',
-                over: 'Over'
+                over: 'Aannemer Eindhoven'
             },
             btnBuzz: 'Buzz Us'
         }
@@ -74,14 +74,14 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Contractor Specializing in High-Quality Bathroom Renovations – Reliable, Transparent, Creative.',
+            title: 'The leading Contractor specializing in high-quality bathroom renovations in Eindhoven – Reliable, Transparent, Creative.',
             btnServices: 'Our services',
             btnWork: 'Our work'
         },
         mission: {
             title: 'All-round contracting company. Personalized approach.',
-            subtitle: 'Specialized in high-quality bathroom renovations.',
-            body: 'At Buzzbuild, we approach every project with the same dedication. We combine our broad construction expertise with a specific, sharp focus on bathrooms. For you, this means: one reliable point of contact for the entire house, honest advice, and a flawless finish for your dream bathroom.'
+            subtitle: 'Specialized in high-quality bathroom renovations in the Eindhoven region.',
+            body: 'At Buzzbuild, we approach every renovation project with the same dedication. We combine our broad construction expertise with a specific, sharp focus on bathrooms. For you in Eindhoven (and surroundings), this means: one reliable contractor for the entire house, honest advice, and a flawless finish for your dream bathroom.'
         },
         values: {
             title: 'Our core values.',
@@ -104,7 +104,7 @@ export const translations = {
         },
         services: {
             title: 'Our services.',
-            subtitle: 'From transforming your bathroom to full home renovations, we offer clear and fair pricing options.',
+            subtitle: 'From transforming your bathroom to full home renovations in Eindhoven, we offer clear and fair pricing options.',
             btnEmail: 'Email us',
             card1: {
                 title: 'Hourly Based',
@@ -126,7 +126,7 @@ export const translations = {
                 proces: 'Process',
                 werk: 'Work',
                 diensten: 'Services',
-                over: 'About'
+                over: 'Contractor Eindhoven'
             },
             btnBuzz: 'Buzz Us'
         }

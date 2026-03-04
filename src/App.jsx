@@ -87,15 +87,15 @@ const Hero = ({ t, handleNavClick }) => (
     <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {/* Stylized Logo Title */}
       <div className="hero-title-wrapper" style={{ marginBottom: '24px' }}>
-        <h1 className="title-font hero-title" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+        <div className="title-font hero-title" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
           <span style={{ color: 'var(--accent-primary)' }}>Buzz</span>
           <span style={{ color: 'var(--text-main)' }}>build</span>
-        </h1>
+        </div>
       </div>
 
-      <p style={{ fontSize: '1.2rem', color: 'var(--text-main)', fontWeight: '500', maxWidth: '800px', margin: '0 0 40px 0' }}>
+      <h1 style={{ fontSize: '1.2rem', color: 'var(--text-main)', fontWeight: '500', maxWidth: '800px', margin: '0 0 40px 0', lineHeight: '1.6' }}>
         {t.hero.title}
-      </p>
+      </h1>
 
       <div className="hero-buttons">
         <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} className="btn btn-primary" style={{ borderRadius: '8px' }}>
