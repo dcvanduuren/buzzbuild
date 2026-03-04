@@ -9,7 +9,7 @@ export const translations = {
         },
         hero: {
             title: 'Aannemersbedrijf gespecialiseerd in badkamer renovaties | regio Eindhoven.',
-            subtitle: 'We komen graag vrijblijvend langs om te zien wat wij voor jouw project kunnen betekenen.',
+            subtitle: 'We komen graag vrijblijvend langs om de mogelijkheden voor jouw project te bespreken.',
             btnServices: 'Onze diensten',
             btnWork: 'Ons werk'
         },

@@ -83,7 +83,7 @@ const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }) => {
 };
 
 const Hero = ({ t, handleNavClick }) => (
-  <section id="hero" className="hero-padding" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
+  <section id="hero" className="hero-padding" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingBottom: '8vh' }}>
     <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {/* Stylized Logo Title */}
       <div className="hero-title-wrapper" style={{ marginBottom: '24px' }}>
@@ -93,11 +93,11 @@ const Hero = ({ t, handleNavClick }) => (
         </div>
       </div>
 
-      <h1 style={{ fontSize: '1.2rem', color: 'var(--text-main)', fontWeight: '500', maxWidth: '800px', margin: '0 0 16px 0', lineHeight: '1.6' }}>
+      <h1 style={{ fontSize: '1.4rem', color: 'var(--text-main)', fontWeight: '600', maxWidth: '800px', margin: '0 0 16px 0', lineHeight: '1.5' }}>
         {t.hero.title}
       </h1>
 
-      <p style={{ fontSize: '1rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 0 40px 0', lineHeight: '1.6' }}>
+      <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 0 40px 0', lineHeight: '1.6', opacity: 0.8 }}>
         {t.hero.subtitle}
       </p>
 
