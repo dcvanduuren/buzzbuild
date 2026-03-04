@@ -8,9 +8,9 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Aannemersbedrijf gespecialiseerd in badkamer renovaties | regio Eindhoven.',
+            title: 'Hét aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken – Betrouwbaar, Transparant, Creatief.',
             subtitle: 'We komen graag vrijblijvend langs om de mogelijkheden voor jouw project te bespreken.',
-            btnServices: 'Onze diensten',
+            btnServices: 'Vraag Offerte Aan',
             btnWork: 'Ons werk'
         },
         mission: {
@@ -64,6 +64,51 @@ export const translations = {
                 over: 'Aannemer Eindhoven'
             },
             btnBuzz: 'Buzz Us'
+        },
+        guarantees: {
+            title: 'Onze Garanties.',
+            subtitle: 'Zekerheid voor, tijdens en na de verbouwing.',
+            items: [
+                {
+                    title: '100% Waterdicht Garantie',
+                    description: 'Wij garanderen een feilloze afwerking van kitwerk en leidingen. Geen zorgen over lekkages.'
+                },
+                {
+                    title: 'Vaste Opleverdatum',
+                    description: 'Wij werken met strakke planningen en garanderen oplevering binnen de afgesproken tijdlijn.'
+                },
+                {
+                    title: 'Eén Vast Aanspreekpunt',
+                    description: 'Geen miscommunicatie. Je hebt altijd direct contact met jouw vaste projectleider.'
+                }
+            ]
+        },
+        trustBadges: [
+            'Erkend Vakmanschap',
+            'Volledig Verzekerd',
+            'KvK Geregistreerd'
+        ],
+        faq: {
+            title: 'Veelgestelde Vragen.',
+            subtitle: 'Duidelijke antwoorden voor jouw gemoedsrust.',
+            items: [
+                {
+                    question: 'Hoe lang duurt een luxe badkamerrenovatie in Eindhoven?',
+                    answer: 'Wij werken met een strakke planning en turn-key oplevering. Een complete luxe badkamerrenovatie duurt bij ons in de regel exact 2 tot 3 weken, zonder onverwachte uitloop.'
+                },
+                {
+                    question: 'Welke garanties bieden jullie op waterdichtheid en kitwerk?',
+                    answer: 'Je krijgt van ons een 100% waterdicht garantie. Wij werken uitsluitend met A-merk bouwmaterialen, hoogwaardige epoxyvoegen en professioneel kitwerk om lekkages in de toekomst volledig uit te sluiten.'
+                },
+                {
+                    question: 'Heb ik één vast aanspreekpunt tijdens de verbouwing?',
+                    answer: 'Ja, absoluut. Wij geloven in heldere communicatie. Je krijgt één toegewijde projectleider die alles coördineert, van de sloop tot de laatste kitrand. Zo weet je altijd bij wie je moet zijn.'
+                },
+                {
+                    question: 'Hoe beperken jullie stof- en geluidsoverlast in mijn woning?',
+                    answer: 'Jouw woning blijft leefbaar. We dekken looproutes strak af, gebruiken professionele stofafzuiging tijdens het zagen en breken, en plannen luidruchtige werkzaamheden altijd in overleg.'
+                }
+            ]
         }
     },
     en: {
@@ -77,7 +122,7 @@ export const translations = {
         hero: {
             title: 'The leading Contractor specializing in high-quality bathroom renovations | Eindhoven region.',
             subtitle: 'We would love to drop by, without any obligations, to see what we can do for your project.',
-            btnServices: 'Our services',
+            btnServices: 'Request a Quote',
             btnWork: 'Our work'
         },
         mission: {
@@ -131,6 +176,51 @@ export const translations = {
                 over: 'Contractor Eindhoven'
             },
             btnBuzz: 'Buzz Us'
+        },
+        guarantees: {
+            title: 'Our Guarantees.',
+            subtitle: 'Security before, during, and after the renovation.',
+            items: [
+                {
+                    title: '100% Waterproof Guarantee',
+                    description: 'We guarantee a flawless finish of sealant and piping. No worries about leaks.'
+                },
+                {
+                    title: 'Fixed Delivery Date',
+                    description: 'We work with strict schedules and guarantee delivery within the agreed timeline.'
+                },
+                {
+                    title: 'Single Point of Contact',
+                    description: 'No miscommunication. You always have direct contact with your dedicated project manager.'
+                }
+            ]
+        },
+        trustBadges: [
+            'Recognized Craftsmanship',
+            'Fully Insured',
+            'Chamber of Commerce Registered'
+        ],
+        faq: {
+            title: 'Frequently Asked Questions.',
+            subtitle: 'Clear answers for your peace of mind.',
+            items: [
+                {
+                    question: 'How long does a luxury bathroom renovation take in Eindhoven?',
+                    answer: 'We work with a strict schedule and turn-key delivery. A complete luxury bathroom renovation typically takes exactly 2 to 3 weeks, without unexpected delays.'
+                },
+                {
+                    question: 'What guarantees do you offer on waterproofing and sealants?',
+                    answer: 'You receive a 100% waterproof guarantee. We exclusively use premium construction materials, high-quality epoxy grouts, and professional sealants to completely rule out future leaks.'
+                },
+                {
+                    question: 'Will I have a single point of contact during the renovation?',
+                    answer: 'Yes, absolutely. We believe in clear communication. You get one dedicated project manager who coordinates everything, from demolition to the final sealant. You always know who to talk to.'
+                },
+                {
+                    question: 'How do you minimize dust and noise pollution in my home?',
+                    answer: 'Your home remains livable. We carefully cover walkways, use professional dust extraction during cutting and demolition, and always plan noisy work in consultation with you.'
+                }
+            ]
         }
     }
 };

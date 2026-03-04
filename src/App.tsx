@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { translations, TranslationData, SupportedLang } from './translations';
+import { SchemaManager } from './components/SEO/SchemaManager';
+import { Guarantees } from './components/Conversion/Guarantees';
+import { TrustBadges } from './components/Conversion/TrustBadges';
+import { FAQ } from './components/UI/FAQ';
 import './index.css';
 
 interface BasicProps {
@@ -124,6 +128,8 @@ const Hero = ({ t, handleNavClick }: NavProps) => (
           {t.hero.btnWork}
         </a>
       </div>
+
+      <TrustBadges t={t} />
 
       <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'center', width: '100%' }}>
         <a href="#missie" onClick={(e) => handleNavClick(e, 'missie')}>
@@ -428,8 +434,8 @@ const Services = ({ t, mailtoLink }: BasicProps & { mailtoLink: string }) => (
             <li><span style={{ color: 'var(--text-muted)' }}>Ideaal voor kortlopende of veranderende projecten</span></li>
           </ul>
 
-          <a href={mailtoLink} className="btn" style={{ width: '100%', background: 'var(--accent-primary)', color: '#fff', opacity: 0.9 }}>
-            Email ons
+          <a href={mailtoLink} className="btn btn-outline" style={{ width: '100%' }}>
+            {t.services.btnEmail}
           </a>
         </div>
 
@@ -461,8 +467,8 @@ const Services = ({ t, mailtoLink }: BasicProps & { mailtoLink: string }) => (
             <li><span style={{ color: 'var(--text-muted)' }}>Ideaal voor langdurige projecten met een omlijnd traject</span></li>
           </ul>
 
-          <a href={mailtoLink} className="btn" style={{ width: '100%', background: 'transparent', color: 'var(--text-main)', border: '1px solid var(--text-muted)' }}>
-            Email ons
+          <a href={mailtoLink} className="btn btn-primary" style={{ width: '100%' }}>
+            {t.services.btnEmail}
           </a>
         </div>
       </div>
@@ -528,9 +534,14 @@ const Footer = ({ t, handleNavClick }: NavProps) => (
           <div className="logo-container">
             <LogoIcon />
           </div>
-          <a href="tel:+31638715895" className="btn btn-primary" style={{ borderRadius: '6px', padding: '10px 24px', opacity: 0.9 }}>
-            Buzz ons
-          </a>
+          <div style={{ marginTop: '16px' }}>
+            <a href="tel:+31638715895" className="btn btn-primary" style={{ borderRadius: '6px', padding: '10px 24px', opacity: 0.9 }}>
+              {t.footer.btnBuzz}
+            </a>
+          </div>
+          <div style={{ transform: 'scale(0.85)', transformOrigin: 'left center', marginTop: '-8px' }}>
+            <TrustBadges t={t} />
+          </div>
         </div>
 
         <div className="footer-right">
@@ -575,6 +586,7 @@ function App() {
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
+      <SchemaManager />
       <BackgroundGlows />
       <Header lang={lang} setLang={setLang} t={t} whatsappLink={whatsappLink} handleNavClick={handleNavClick} />
       <main>
@@ -583,7 +595,9 @@ function App() {
         <Projects t={t} />
         <Values t={t} />
         <Testimonials t={t} />
+        <Guarantees t={t} />
         <Services t={t} mailtoLink={mailtoLink} />
+        <FAQ t={t} />
         <Team t={t} />
       </main>
       <Footer t={t} handleNavClick={handleNavClick} />
