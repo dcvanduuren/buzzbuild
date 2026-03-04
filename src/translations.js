@@ -8,7 +8,7 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Hét aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken – Betrouwbaar, Transparant, Creatief.',
+            title: 'Aannemersbedrijf gespecialiseerd in badkamer renovaties in regio Eindhoven.',
             btnServices: 'Onze diensten',
             btnWork: 'Ons werk'
         },
