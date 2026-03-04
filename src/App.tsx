@@ -1,13 +1,22 @@
-import { useState } from 'react';
-import { translations } from './translations';
+import React, { useState } from 'react';
+import { translations, TranslationData, SupportedLang } from './translations';
 import './index.css';
+
+interface BasicProps {
+  t: TranslationData;
+}
+
+interface NavProps {
+  t: TranslationData;
+  handleNavClick: (e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>, target: string) => void;
+}
 
 // --- SVGs & Icons ---
 const LogoIcon = () => (
   <img src="/assets/images/Logo.png" alt="Buzzbuild Logo" className="header-logo-icon" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
 );
 
-const DownArrow = ({ onClick }) => (
+const DownArrow = ({ onClick }: { onClick?: React.MouseEventHandler<SVGSVGElement> }) => (
   <svg onClick={onClick} className="animate-bounce" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.5, cursor: 'pointer' }}>
     <circle cx="12" cy="12" r="10"></circle>
     <polyline points="8 12 12 16 16 12"></polyline>
@@ -29,10 +38,16 @@ const WhatsAppIcon = () => (
 
 // --- Component Fragments ---
 
-const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }) => {
+interface HeaderProps extends NavProps {
+  lang: SupportedLang;
+  setLang: React.Dispatch<React.SetStateAction<SupportedLang>>;
+  whatsappLink: string;
+}
+
+const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const onNavClick = (e, target) => {
+  const onNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>, target: string) => {
     setMenuOpen(false); // Close dropdown on click
     handleNavClick(e, target);
   };
@@ -82,7 +97,7 @@ const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }) => {
   );
 };
 
-const Hero = ({ t, handleNavClick }) => (
+const Hero = ({ t, handleNavClick }: NavProps) => (
   <section id="hero" className="hero-padding" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingBottom: '8vh' }}>
     <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {/* Stylized Logo Title */}
@@ -119,7 +134,7 @@ const Hero = ({ t, handleNavClick }) => (
   </section>
 );
 
-const Mission = ({ t }) => (
+const Mission = ({ t }: BasicProps) => (
   <section id="missie" className="mission-padding">
     <div className="container" style={{ display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap' }}>
 
@@ -160,7 +175,7 @@ const Mission = ({ t }) => (
   </section>
 );
 
-const Values = ({ t }) => {
+const Values = ({ t }: BasicProps) => {
   // Parsing the translation strings into bullets for the cards based on new design
   const cardData = [
     {
@@ -240,11 +255,18 @@ const projectData = [
   }
 ];
 
-const Projects = ({ t }) => {
-  const [activeProject, setActiveProject] = useState(null);
+interface ProjectItem {
+  id: number;
+  title: string;
+  folder: string;
+  images: string[];
+}
+
+const Projects = ({ t }: BasicProps) => {
+  const [activeProject, setActiveProject] = useState<ProjectItem | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const openProject = (project) => {
+  const openProject = (project: ProjectItem) => {
     setActiveProject(project);
     setCurrentImageIndex(0);
     document.body.style.overflow = 'hidden'; // prevent background scrolling
@@ -255,14 +277,18 @@ const Projects = ({ t }) => {
     document.body.style.overflow = 'auto'; // re-enable scrolling
   };
 
-  const nextImage = (e) => {
+  const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev + 1) % activeProject.images.length);
+    if (activeProject) {
+      setCurrentImageIndex((prev) => (prev + 1) % activeProject.images.length);
+    }
   };
 
-  const prevImage = (e) => {
+  const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev === 0 ? activeProject.images.length - 1 : prev - 1));
+    if (activeProject) {
+      setCurrentImageIndex((prev) => (prev === 0 ? activeProject.images.length - 1 : prev - 1));
+    }
   };
 
   return (
@@ -326,7 +352,7 @@ const Projects = ({ t }) => {
   );
 };
 
-const Testimonials = ({ t }) => {
+const Testimonials = ({ t }: BasicProps) => {
   const reviews = [1, 2, 3, 4, 5];
   // We duplicate the array to allow for a seamless infinite scroll loop
   const seamlessReviews = [...reviews, ...reviews];
@@ -365,7 +391,7 @@ const Testimonials = ({ t }) => {
   );
 };
 
-const Services = ({ t, mailtoLink }) => (
+const Services = ({ t, mailtoLink }: BasicProps & { mailtoLink: string }) => (
   <section id="diensten" className="section-padding">
     <div className="container">
       <div className="section-header text-center">
@@ -444,7 +470,7 @@ const Services = ({ t, mailtoLink }) => (
   </section>
 );
 
-const Team = ({ t }) => (
+const Team = ({ t }: BasicProps) => (
   <section id="over" className="section-padding">
     <div className="container">
       <div className="section-header text-center">
@@ -494,7 +520,7 @@ const Team = ({ t }) => (
   </section>
 );
 
-const Footer = ({ t, handleNavClick }) => (
+const Footer = ({ t, handleNavClick }: NavProps) => (
   <footer className="footer">
     <div className="container">
       <div className="footer-content">
@@ -508,10 +534,10 @@ const Footer = ({ t, handleNavClick }) => (
         </div>
 
         <div className="footer-right">
-          <a href="#waarden" onClick={(e) => handleNavClick(e, 'waarden')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>Proces</a>
-          <a href="#projecten" onClick={(e) => handleNavClick(e, 'projecten')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>Werk</a>
-          <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>Diensten</a>
-          <a href="#over" onClick={(e) => handleNavClick(e, 'over')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>Over ons</a>
+          <a href="#waarden" onClick={(e) => handleNavClick(e, 'waarden')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>{t.footer.nav.proces}</a>
+          <a href="#projecten" onClick={(e) => handleNavClick(e, 'projecten')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>{t.footer.nav.werk}</a>
+          <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>{t.footer.nav.diensten}</a>
+          <a href="#over" onClick={(e) => handleNavClick(e, 'over')} style={{ fontSize: '0.85rem', fontWeight: '500' }}>{t.footer.nav.over}</a>
         </div>
       </div>
     </div>
@@ -533,10 +559,10 @@ const BackgroundGlows = () => (
 // --- Main App Composer ---
 
 function App() {
-  const [lang, setLang] = useState('nl');
+  const [lang, setLang] = useState<SupportedLang>('nl');
   const t = translations[lang];
 
-  const handleNavClick = (e, targetId) => {
+  const handleNavClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {

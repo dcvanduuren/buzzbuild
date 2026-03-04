@@ -134,3 +134,6 @@ export const translations = {
         }
     }
 };
+
+export type TranslationData = typeof translations.nl;
+export type SupportedLang = keyof typeof translations;
