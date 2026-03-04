@@ -93,9 +93,13 @@ const Hero = ({ t, handleNavClick }) => (
         </div>
       </div>
 
-      <h1 style={{ fontSize: '1.2rem', color: 'var(--text-main)', fontWeight: '500', maxWidth: '800px', margin: '0 0 40px 0', lineHeight: '1.6' }}>
+      <h1 style={{ fontSize: '1.2rem', color: 'var(--text-main)', fontWeight: '500', maxWidth: '800px', margin: '0 0 16px 0', lineHeight: '1.6' }}>
         {t.hero.title}
       </h1>
+
+      <p style={{ fontSize: '1rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 0 40px 0', lineHeight: '1.6' }}>
+        {t.hero.subtitle}
+      </p>
 
       <div className="hero-buttons">
         <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} className="btn btn-primary" style={{ borderRadius: '8px' }}>

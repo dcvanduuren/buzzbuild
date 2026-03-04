@@ -8,7 +8,8 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Aannemersbedrijf gespecialiseerd in badkamer renovaties in regio Eindhoven.',
+            title: 'Aannemersbedrijf gespecialiseerd in badkamer renovaties | regio Eindhoven.',
+            subtitle: 'We komen graag vrijblijvend langs om te zien wat wij voor jouw project kunnen betekenen.',
             btnServices: 'Onze diensten',
             btnWork: 'Ons werk'
         },
@@ -74,7 +75,8 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'The leading Contractor specializing in high-quality bathroom renovations in Eindhoven – Reliable, Transparent, Creative.',
+            title: 'The leading Contractor specializing in high-quality bathroom renovations | Eindhoven region.',
+            subtitle: 'We would love to drop by, without any obligations, to see what we can do for your project.',
             btnServices: 'Our services',
             btnWork: 'Our work'
         },
