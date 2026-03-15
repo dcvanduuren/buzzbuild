@@ -13,6 +13,7 @@ export const TrustBadges: React.FC<TrustBadgesProps> = ({ t }) => {
             alignItems: 'center',
             justifyContent: 'flex-start',
             marginTop: '24px',
+            marginBottom: '24px',
             flexWrap: 'wrap'
         }}>
             {t.trustBadges.map((badge, index) => (

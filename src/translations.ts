@@ -8,15 +8,15 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Hét aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken – Betrouwbaar, Transparant, Creatief.',
-            subtitle: 'We komen graag vrijblijvend langs om de mogelijkheden voor jouw project te bespreken.',
+            title: 'Aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven, Veldhoven en Best.',
+            subtitle: 'Hét aannemersbedrijf voor regio Eindhoven. We komen graag vrijblijvend langs om de mogelijkheden voor jouw project te bespreken.',
             btnServices: 'Vraag Offerte Aan',
             btnWork: 'Ons werk'
         },
         mission: {
             title: 'Allround aannemersbedrijf. Persoonlijke aanpak.',
             subtitle: 'Gespecialiseerd in hoogwaardige badkamerrenovaties in regio Eindhoven.',
-            body: 'Bij Buzzbuild pakken we elk renovatieproject met dezelfde toewijding aan. Wij combineren onze brede bouwexpertise met een specifieke, scherpe focus op badkamers. Voor jou in Eindhoven (en omstreken) betekent dit: één betrouwbare aannemer voor het hele huis, eerlijk advies en een feilloze afwerking van jouw droombadkamer.'
+            body: 'Bij Buzzbuild pakken we elk renovatieproject met dezelfde toewijding aan. Wij combineren onze brede bouwexpertise met een specifieke, scherpe focus op badkamers. Voor jou in Eindhoven, Veldhoven, Best, Nuenen en Geldrop betekent dit: één betrouwbare aannemer voor het hele huis, eerlijk advies en een feilloze afwerking van jouw droombadkamer.'
         },
         values: {
             title: 'Onze kernwaarden.',
@@ -120,8 +120,8 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'The leading Contractor specializing in high-quality bathroom renovations | Eindhoven region.',
-            subtitle: 'We would love to drop by, without any obligations, to see what we can do for your project.',
+            title: 'The leading Contractor specializing in high-quality bathroom renovations | Eindhoven, Veldhoven & Best.',
+            subtitle: 'The go-to construction company for the Eindhoven region. We would love to drop by, without any obligations, to talk about your project.',
             btnServices: 'Request a Quote',
             btnWork: 'Our work'
         },
