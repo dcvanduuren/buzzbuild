@@ -1,4 +1,3 @@
-import React from 'react';
 import { TranslationData } from '../../translations';
 
 interface MissionProps {
@@ -17,7 +16,7 @@ export const Mission = ({ t }: MissionProps) => (
         <h3 className="text-accent mission-subtitle">
           {t.mission.subtitle}
         </h3>
-        <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', opacity: 0.9, lineHeight: '1.7', margin: 0 }}>
+        <p className="mission-body" style={{ color: 'var(--text-main)', opacity: 0.9, lineHeight: '1.7', margin: 0 }}>
           {t.mission.body}
         </p>
       </div>

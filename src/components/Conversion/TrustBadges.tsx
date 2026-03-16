@@ -7,7 +7,7 @@ interface TrustBadgesProps {
 
 export const TrustBadges: React.FC<TrustBadgesProps> = ({ t }) => {
     return (
-        <div style={{
+        <div className="trust-badges-container" style={{
             display: 'flex',
             gap: '24px',
             alignItems: 'center',
@@ -17,12 +17,11 @@ export const TrustBadges: React.FC<TrustBadgesProps> = ({ t }) => {
             flexWrap: 'wrap'
         }}>
             {t.trustBadges.map((badge, index) => (
-                <div key={index} style={{
+                <div key={index} className="trust-badge" style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '8px',
                     color: 'var(--text-muted)',
-                    fontSize: '0.85rem',
                     fontWeight: '500'
                 }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.8 }}>

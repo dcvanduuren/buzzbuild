@@ -60,9 +60,9 @@ export const translations = {
             btnEmail: 'E-mail ons',
             card1: {
                 title: 'Uurbasis',
-                price: '€XX/uur',
+                price: '€50',
                 from: 'Vanaf:',
-                unit: '/uur',
+                unit: '/Uur',
                 body: 'Voor kleinere projecten of urgente taken bieden wij een uurtarief aan. Hierdoor kunnen we snel aan de slag zonder ingewikkelde offertes of lange planningsfases.',
                 howItWorks: 'Hoe het werkt: Je betaalt een vast uurtarief per vakman, exclusief materiaalkosten.',
                 bullets: [
@@ -91,10 +91,10 @@ export const translations = {
         },
         footer: {
             nav: {
-                proces: 'Proces',
-                werk: 'Werk',
+                proces: 'Waarden',
+                werk: 'Projecten',
                 diensten: 'Diensten',
-                over: 'Aannemer Eindhoven'
+                over: 'Over Ons'
             },
             btnBuzz: 'Buzz Us'
         },
@@ -202,9 +202,9 @@ export const translations = {
             btnEmail: 'Email Us',
             card1: {
                 title: 'Hourly Basis',
-                price: '€XX/hour',
+                price: '€50',
                 from: 'From:',
-                unit: '/hour',
+                unit: '/Hour',
                 body: 'For smaller projects or urgent tasks, we offer an hourly rate. This allows us to get started quickly without complicated quotes or long planning phases.',
                 howItWorks: 'How it works: You pay a fixed hourly rate per craftsman, excluding material costs.',
                 bullets: [
@@ -233,10 +233,10 @@ export const translations = {
         },
         footer: {
             nav: {
-                proces: 'Process',
-                werk: 'Work',
+                proces: 'Values',
+                werk: 'Projects',
                 diensten: 'Services',
-                over: 'Contractor Eindhoven'
+                over: 'About Us'
             },
             btnBuzz: 'Buzz Us'
         },
