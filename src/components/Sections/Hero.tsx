@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export const Hero = ({ t, handleNavClick }: HeroProps) => (
-  <section id="hero" className="hero-padding" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingBottom: '8vh' }}>
+  <section id="hero" className="hero-padding" style={{ height: '100vh', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingBottom: '4vh', overflow: 'hidden' }}>
     <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {/* Stylized Logo Title */}
       <div className="hero-title-wrapper" style={{ marginBottom: '24px' }}>
@@ -28,21 +28,29 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => (
       </p>
 
       <div className="hero-buttons">
-        <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} className="btn btn-primary" style={{ borderRadius: '8px' }}>
+        <a href="#diensten" onClick={(e) => handleNavClick(e, 'diensten')} className="btn btn-primary">
           {t.hero.btnServices}
         </a>
-        <a href="#projecten" onClick={(e) => handleNavClick(e, 'projecten')} className="btn btn-outline" style={{ borderRadius: '8px' }}>
+        <a href="#projecten" onClick={(e) => handleNavClick(e, 'projecten')} className="btn btn-outline">
           {t.hero.btnWork}
         </a>
       </div>
 
       <TrustBadges t={t} />
 
-      <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'center', width: '100%', paddingTop: '20px' }}>
-        <a href="#missie" onClick={(e) => handleNavClick(e, 'missie')}>
-          <DownArrow />
-        </a>
-      </div>
+    </div>
+
+    <div style={{ 
+      position: 'absolute', 
+      bottom: '40px', 
+      left: '50%', 
+      transform: 'translateX(-50%)', 
+      display: 'flex', 
+      justifyContent: 'center' 
+    }}>
+      <a href="#missie" onClick={(e) => handleNavClick(e, 'missie')} className="animate-bounce">
+        <DownArrow />
+      </a>
     </div>
   </section>
 );

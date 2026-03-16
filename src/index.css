@@ -36,9 +36,9 @@
   --font-main: 'Plus Jakarta Sans', sans-serif;
 
   /* Sizing and Spacing Variables */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-sm: 8px;
+  --radius-md: 24px;
+  --radius-lg: 40px;
   --radius-full: 9999px;
 
   --transition-fast: 0.15s ease-out;
@@ -53,7 +53,6 @@
 
 html {
   font-family: var(--font-main);
-  background-color: var(--bg-primary);
   color: var(--text-main);
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -69,52 +68,7 @@ body {
   background-color: var(--bg-primary);
 }
 
-.glow-orb {
-  position: absolute;
-  background: radial-gradient(ellipse at center, rgba(255, 145, 77, 0.9) 0%, rgba(255, 145, 77, 0.4) 50%, rgba(255, 145, 77, 0) 80%);
-  filter: blur(150px);
-  z-index: -1;
-  pointer-events: none;
-}
-
-.glow-orb-1 {
-  border-radius: 43% 57% 70% 30% / 30% 60% 40% 70%;
-  animation: floatGlow 15s ease-in-out infinite;
-}
-
-.glow-orb-2 {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: floatGlow 18s ease-in-out infinite reverse;
-}
-
-.glow-orb-3 {
-  border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
-  animation: floatGlow 20s ease-in-out infinite;
-}
-
-.glow-orb-4 {
-  border-radius: 30% 70% 50% 50% / 50% 30% 70% 50%;
-  animation: floatGlow 22s ease-in-out infinite alternate;
-}
-
-.glow-orb-5 {
-  border-radius: 70% 30% 40% 60% / 40% 70% 30% 60%;
-  animation: floatGlow 17s ease-in-out infinite alternate-reverse;
-}
-
-@keyframes floatGlow {
-  0% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-
-  50% {
-    transform: translate(30px, -40px) scale(1.05) rotate(5deg);
-  }
-
-  100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-}
+/* Unused glow-orbs removed for new background animation */
 
 .glass-card {
   padding: 40px;
@@ -122,6 +76,7 @@ body {
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
   border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
@@ -190,6 +145,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-orientation: from-image;
   border-radius: var(--radius-md);
   transition: transform 0.5s ease;
 }
@@ -253,6 +209,7 @@ body {
   max-width: 100%;
   max-height: 85vh;
   object-fit: contain;
+  image-orientation: from-image;
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
 }
@@ -342,9 +299,12 @@ body {
 }
 
 .hero-title {
-  font-size: 5rem;
-  letter-spacing: 0.02em;
+  font-size: 7.5rem; /* Increased significantly for more pop */
+  letter-spacing: -0.04em;
   margin: 0;
+  line-height: 0.9;
+  font-weight: 800;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .mission-title {
@@ -477,7 +437,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 14px 20px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.95rem;
   transition: all var(--transition-normal);
@@ -518,8 +478,8 @@ section {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
   transition: all var(--transition-normal);
 }
 
@@ -537,14 +497,31 @@ section {
 }
 
 /* Header Navbar */
+.header-wrapper {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  max-width: 95%; /* safety for small screens */
+  transition: top 0.3s ease;
+}
+
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 28px 0;
-  background: rgba(7, 28, 46, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 32px; /* Increased horizontal padding */
+  background: rgba(10, 20, 35, 0.4); /* Glassmorphism background */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  gap: 48px; /* Increased gap between main elements */
 }
 
 .header-content {
@@ -556,7 +533,7 @@ section {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px; /* slightly more space for the logo */
   cursor: pointer;
 }
 
@@ -574,15 +551,15 @@ section {
 
 .main-nav {
   display: flex;
-  gap: 30px;
+  gap: 40px; /* Increased gap between nav links */
 }
 
 .main-nav a {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500; /* slightly thinner */
   color: var(--text-main);
   position: relative;
-  padding-bottom: 4px;
+  padding: 8px 0; /* padding for click area */
 }
 
 .main-nav a::after {
@@ -604,7 +581,7 @@ section {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px; /* Increased gap between action items */
 }
 
 /* Section specific margins */
@@ -674,7 +651,7 @@ ul.bullet-list li {
 
   /* Typography scales down */
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     justify-content: center;
   }
 
@@ -755,22 +732,28 @@ ul.bullet-list li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .main-nav {
     display: none;
     position: absolute;
-    top: 70px;
-    /* Below header */
+    top: calc(100% + 12px); /* Float below the header */
     left: 0;
     right: 0;
-    background: rgba(7, 28, 46, 0.95);
-    backdrop-filter: blur(16px);
+    background: rgba(10, 20, 35, 0.85); /* Glassmorphism dropdown */
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
     flex-direction: column;
     padding: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-lg);
     z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
   }
 
   .main-nav.mobile-open {
@@ -778,8 +761,14 @@ ul.bullet-list li {
   }
 
   .main-nav a {
-    font-size: 1.2rem;
-    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .main-nav a:last-child {
+    border-bottom: none;
   }
 
   /* Right-side alignment */
@@ -827,8 +816,73 @@ ul.bullet-list li {
   }
 
   .footer-right {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column; /* Stack vertically like the screenshot */
+    align-items: center;
+    gap: 16px;
   }
+
+  .footer-right a {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+/* ========================================= */
+/* BACKGROUND GRADIENT ANIMATIONS           */
+/* ========================================= */
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-first {
+  animation: moveVertical 300s ease infinite;
+}
+
+.animate-second {
+  animation: moveInCircle 200s reverse infinite;
+}
+
+.animate-third {
+  animation: moveInCircle 400s linear infinite;
+}
+
+.animate-fourth {
+  animation: moveHorizontal 400s ease infinite;
+}
+
+.animate-fifth {
+  animation: moveInCircle 200s ease infinite;
 }

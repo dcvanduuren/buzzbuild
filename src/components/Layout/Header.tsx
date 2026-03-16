@@ -19,8 +19,8 @@ export const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: Heade
   };
 
   return (
-    <header className="header">
-      <div className="container header-content">
+    <div className="header-wrapper">
+      <header className="header">
         {/* Left: Logo */}
         <div className="logo-container" onClick={(e) => onNavClick(e, 'hero')}>
           <LogoIcon />
@@ -53,12 +53,12 @@ export const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: Heade
             {lang.toUpperCase()}
           </button>
 
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm wa-btn" style={{ borderRadius: '8px', padding: '8px 16px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm wa-btn" style={{ padding: '8px 16px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span className="wa-icon-wrapper"><WhatsAppIcon /></span>
             <span className="wa-text">{t.nav.whatsapp}</span>
           </a>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };

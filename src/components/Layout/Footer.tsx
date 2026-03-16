@@ -17,7 +17,7 @@ export const Footer = ({ t, handleNavClick }: FooterProps) => (
             <LogoIcon />
           </div>
           <div style={{ marginTop: '16px' }}>
-            <a href="tel:+31638715895" className="btn btn-primary" style={{ borderRadius: '6px', padding: '10px 24px', opacity: 0.9 }}>
+            <a href="tel:+31638715895" className="btn btn-primary" style={{ padding: '10px 24px', opacity: 0.9 }}>
               {t.footer.btnBuzz}
             </a>
           </div>

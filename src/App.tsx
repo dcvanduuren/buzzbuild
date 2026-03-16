@@ -30,8 +30,7 @@ function App() {
   const mailtoLink = "mailto:info@buzzbuild.nl?subject=Aanvraag%20Diensten%20-%20Website&body=Hallo,%20ik%20wil%20graag%20meer%20informatie%20over...";
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <SchemaManager />
+    <div style={{ position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden' }}>
       <BackgroundGlows />
       <Header 
         lang={lang} 
@@ -40,6 +39,8 @@ function App() {
         whatsappLink={whatsappLink} 
         handleNavClick={handleNavClick} 
       />
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        <SchemaManager />
       <main>
         <Hero t={t} handleNavClick={handleNavClick} />
         <Mission t={t} />
@@ -51,6 +52,7 @@ function App() {
         <Team t={t} />
       </main>
       <Footer t={t} handleNavClick={handleNavClick} />
+      </div>
     </div>
   );
 }

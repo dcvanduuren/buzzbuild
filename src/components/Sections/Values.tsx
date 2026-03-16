@@ -7,29 +7,7 @@ interface ValuesProps {
 
 export const Values = ({ t }: ValuesProps) => {
   // Parsing the translation strings into bullets for the cards based on new design
-  const cardData = [
-    {
-      title: 'Vakmanschap & Kwaliteit',
-      bullets: [
-        'Zichtbaar beter resultaat door precisie.',
-        'Duurzame materialen voor een lange levensduur.'
-      ]
-    },
-    {
-      title: 'Helder & Transparant',
-      bullets: [
-        'Eerlijke afspraken en een strakke planning.',
-        'Geen onverwachte kosten en altijd duidelijkheid.'
-      ]
-    },
-    {
-      title: 'Persoonlijke Aanpak',
-      bullets: [
-        'Oplossingen volledig op jouw wensen afgestemd.',
-        'Betrokken van het eerste advies tot de oplevering.'
-      ]
-    }
-  ];
+  const cardData = t.values.cards;
 
   return (
     <section id="waarden" className="section-padding">
@@ -41,9 +19,7 @@ export const Values = ({ t }: ValuesProps) => {
 
         <div className="responsive-grid grid-3" style={{ gap: '20px' }}>
           {cardData.map((card, index) => (
-            <div key={index} className="glass-card" style={{
-              borderRadius: 'var(--radius-md)',
-            }}>
+            <div key={index} className="glass-card">
               <h3 className="text-accent" style={{ fontSize: '1.1rem', marginBottom: '24px', fontWeight: '600' }}>
                 {card.title}
               </h3>

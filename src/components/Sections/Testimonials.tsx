@@ -23,7 +23,6 @@ export const Testimonials = ({ t }: TestimonialsProps) => {
           <div className="carousel-track">
             {seamlessReviews.map((item, index) => (
               <div key={`${item}-${index}`} className="glass-card carousel-card-width" style={{
-                borderRadius: 'var(--radius-md)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '16px',
