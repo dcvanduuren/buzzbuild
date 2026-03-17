@@ -3,23 +3,24 @@ export const translations = {
         nav: {
             waarden: 'Waarden',
             projecten: 'Projecten',
+            resultaten: 'Resultaten',
             diensten: 'Diensten',
             over: 'Over Ons',
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken.',
+            title: 'Aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken',
             subtitle: 'We komen graag vrijblijvend langs om de mogelijkheden voor jouw project te bespreken.',
             btnServices: 'Vraag Offerte Aan',
             btnWork: 'Ons werk'
         },
         mission: {
-            title: 'Allround aannemersbedrijf. Persoonlijke aanpak.',
+            title: 'Allround aannemersbedrijf',
             subtitle: 'Gespecialiseerd in hoogwaardige badkamerrenovaties in regio Eindhoven.',
-            body: 'Bij Buzzbuild pakken we elk renovatieproject met dezelfde toewijding aan. Wij combineren onze brede bouwexpertise met een specifieke, scherpe focus op badkamers. Voor jou in Eindhoven, Veldhoven, Best, Nuenen en Geldrop betekent dit: één betrouwbare aannemer voor het hele huis, eerlijk advies en een feilloze afwerking van jouw droombadkamer.'
+            body: 'Bij Buzzbuild pakken we elk renovatieproject met dezelfde toewijding aan. Wij combineren onze brede bouwexpertise met een specifieke, scherpe focus op badkamers. Voor jou in Eindhoven, Veldhoven, Best, Nuenen, Geldrop, Helmond en Valkenswaard betekent dit: één betrouwbare aannemer voor het hele huis, eerlijk advies en een feilloze afwerking van jouw droombadkamer.'
         },
         values: {
-            title: 'Onze kernwaarden.',
+            title: 'Onze kernwaarden',
             subtitle: 'Wij staan voor kwaliteit, heldere communicatie, duurzaamheid, alles-in-één service en betrouwbaarheid.',
             cards: [
                 { 
@@ -39,24 +40,24 @@ export const translations = {
                 { 
                     title: 'Persoonlijke Aanpak', 
                     bullets: [
-                        'Oplossingen volledig op jouw wensen afgestemd.',
-                        'Betrokken van het eerste advies tot de oplevering.'
+                        'Oplossingen op jouw wensen afgestemd.',
+                        'Betrokken vanaf het eerste advies tot de oplevering.'
                     ]
                 }
             ]
         },
         projects: {
-            title: 'Onze Projecten.',
+            title: 'Onze Projecten',
             subtitle: 'Ontdek onze vakkundig uitgevoerde projecten.'
         },
         testimonials: {
-            title: 'Onze resultaten.',
+            title: 'Onze resultaten',
             subtitle: 'Hoor wat onze klanten te zeggen hebben.',
             emptyText: 'Nog geen beoordeling'
         },
         services: {
-            title: 'Onze diensten.',
-            subtitle: 'Van het transformeren van je badkamer tot een volledige woningrenovatie in Eindhoven, wij bieden duidelijke en eerlijke prijsopties.',
+            title: 'Onze diensten',
+            subtitle: 'Van het transformeren van je badkamer tot een volledige woningrenovatie, wij bieden duidelijke en eerlijke prijsopties.',
             btnEmail: 'E-mail ons',
             card1: {
                 title: 'Uurbasis',
@@ -74,9 +75,9 @@ export const translations = {
             card2: {
                 title: 'Projectbasis',
                 price: 'Op aanvraag',
-                from: 'Vanaf:',
-                body: 'Voor grotere projecten bieden we een gedetailleerde offerte met een vaste prijs. Dit zorgt voor transparantie en een efficiënte planning van begin tot eind.',
-                howItWorks: 'Hoe het werkt: We berekenen arbeid, materialen en planning in één vaste prijs—geen verrassingen achteraf.',
+                from: 'Projectprijs:',
+                body: 'Voor grotere projecten bieden we een gedetailleerde offerte met een vaste prijs. Dit zorgt voor transparantie en financiele zekerheid',
+                howItWorks: 'Hoe het werkt: We berekenen arbeid, materialen en planning in één vaste prijs. geen verrassingen achteraf.',
                 bullets: [
                     'Duidelijke prijs vooraf',
                     'Efficiënte uitvoering met gestructureerde planning',
@@ -85,21 +86,22 @@ export const translations = {
             }
         },
         team: {
-            title: 'Ons team.',
-            subtitle: 'Ontmoet ons team dat met trots en vakmanschap jouw badkamer en huis transformeert.',
+            title: 'Ons team',
+            subtitle: 'Ontmoet ons team dat met trots jouw badkamer en huis transformeert.',
             founder: 'Oprichter'
         },
         footer: {
             nav: {
                 proces: 'Waarden',
                 werk: 'Projecten',
+                resultaten: 'Resultaten',
                 diensten: 'Diensten',
                 over: 'Over Ons'
             },
             btnBuzz: 'Buzz Us'
         },
         guarantees: {
-            title: 'Onze Garanties.',
+            title: 'Onze Garanties',
             subtitle: 'Zekerheid voor, tijdens en na de verbouwing.',
             items: [
                 {
@@ -118,20 +120,20 @@ export const translations = {
         },
         trustBadges: [
             'Erkend Vakmanschap',
-            'Volledig Verzekerd',
+            'Verzekerd',
             'KvK Geregistreerd'
         ],
         faq: {
-            title: 'Veelgestelde Vragen.',
+            title: 'Veelgestelde Vragen',
             subtitle: 'Duidelijke antwoorden voor jouw gemoedsrust.',
             items: [
                 {
                     question: 'Hoe lang duurt een luxe badkamerrenovatie in Eindhoven?',
-                    answer: 'Wij werken met een strakke planning en turn-key oplevering. Een complete luxe badkamerrenovatie duurt bij ons in de regel exact 2 tot 4 weken, zonder onverwachte uitloop.'
+                    answer: 'Wij werken met een strakke planning en turn-key oplevering. Een complete luxe badkamerrenovatie duurt bij ons in de regel 3 tot 5 weken.'
                 },
                 {
                     question: 'Welke garanties bieden jullie op waterdichtheid en kitwerk?',
-                    answer: 'Je krijgt van ons een 100% waterdicht garantie. Wij werken uitsluitend met A-merk bouwmaterialen, hoogwaardige epoxyvoegen en professioneel kitwerk om lekkages in de toekomst volledig uit te sluiten.'
+                    answer: 'Je krijgt van ons een 100% waterdicht garantie op de badkamerconstructie van 5 jaar. Wij werken uitsluitend met A-merk bouwmaterialen, hoogwaardige voegen en professioneel kitwerk om lekkages in de toekomst volledig uit te sluiten.'
                 },
 
                 {
@@ -145,23 +147,24 @@ export const translations = {
         nav: {
             waarden: 'Values',
             projecten: 'Projects',
+            resultaten: 'Results',
             diensten: 'Services',
             over: 'About Us',
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'Contracting company specializing in high-end bathroom renovations in Eindhoven and surroundings.',
+            title: 'The leading Contractor specializing in high-quality bathroom renovations | Eindhoven region',
             subtitle: 'We are happy to visit you for a no-obligation consultation to discuss the possibilities for your project.',
             btnServices: 'Request a Quote',
             btnWork: 'Our Work'
         },
         mission: {
-            title: 'All-round contractor. Personal approach.',
+            title: 'All-round contractor',
             subtitle: 'Specialized in high-end bathroom renovations in the Eindhoven region.',
-            body: 'At Buzzbuild, we tackle every renovation project with the same dedication. We combine our broad construction expertise with a specific, sharp focus on bathrooms. For you in Eindhoven, Veldhoven, Best, Nuenen, and Geldrop, this means: one reliable contractor for the entire house, honest advice, and a flawless finish for your dream bathroom.'
+            body: 'At Buzzbuild, we tackle every renovation project with the same dedication. We combine our broad construction expertise with a specific, sharp focus on bathrooms. For you in Eindhoven, Veldhoven, Best, Nuenen, Geldrop, Helmond, and Valkenswaard, this means: one reliable contractor for the entire house, honest advice, and a flawless finish for your dream bathroom.'
         },
         values: {
-            title: 'Our Core Values.',
+            title: 'Our Core Values',
             subtitle: 'We stand for quality, clear communication, sustainability, all-in-one service, and reliability.',
             cards: [
                 { 
@@ -181,24 +184,24 @@ export const translations = {
                 { 
                     title: 'Personal Approach', 
                     bullets: [
-                        'Solutions fully tailored to your wishes.',
-                        'Involved from the first advice to completion.'
+                        'Solutions tailored to your wishes.',
+                        'Involved from initial advice to completion.'
                     ]
                 }
             ]
         },
         projects: {
-            title: 'Our Projects.',
+            title: 'Our Projects',
             subtitle: 'Discover our expertly executed projects.'
         },
         testimonials: {
-            title: 'Our Results.',
+            title: 'Our Results',
             subtitle: 'Hear what our clients have to say.',
             emptyText: 'No reviews yet'
         },
         services: {
-            title: 'Our Services.',
-            subtitle: 'From transforming your bathroom to a full home renovation in Eindhoven, we offer clear and honest pricing options.',
+            title: 'Our Services',
+            subtitle: 'From transforming your bathroom to a full home renovation, we offer clear and honest pricing options.',
             btnEmail: 'Email Us',
             card1: {
                 title: 'Hourly Basis',
@@ -216,9 +219,9 @@ export const translations = {
             card2: {
                 title: 'Project Basis',
                 price: 'On request',
-                from: 'From:',
-                body: 'For larger projects, we offer a detailed quote with a fixed price. This ensures transparency and efficient planning from start to finish.',
-                howItWorks: 'How it works: We calculate labor, materials, and planning into one fixed price—no surprises afterwards.',
+                from: 'Project Price:',
+                body: 'For larger projects, we offer a detailed quote with a fixed price. This ensures transparency and financial security.',
+                howItWorks: 'How it works: We calculate labor, materials, and planning into one fixed price. No surprises afterwards.',
                 bullets: [
                     'Clear price in advance',
                     'Efficient execution with structured planning',
@@ -227,21 +230,22 @@ export const translations = {
             }
         },
         team: {
-            title: 'Our Team.',
-            subtitle: 'Meet our team that proudly and skillfully transforms your bathroom and home.',
+            title: 'Our Team',
+            subtitle: 'Meet our team that proudly transforms your bathroom and home.',
             founder: 'Founder'
         },
         footer: {
             nav: {
                 proces: 'Values',
                 werk: 'Projects',
+                resultaten: 'Results',
                 diensten: 'Services',
                 over: 'About Us'
             },
             btnBuzz: 'Buzz Us'
         },
         guarantees: {
-            title: 'Our Guarantees.',
+            title: 'Our Guarantees',
             subtitle: 'Certainty before, during, and after the renovation.',
             items: [
                 {
@@ -264,16 +268,16 @@ export const translations = {
             'Chamber of Commerce Registered'
         ],
         faq: {
-            title: 'Frequently Asked Questions.',
+            title: 'Frequently Asked Questions',
             subtitle: 'Clear answers for your peace of mind.',
             items: [
                 {
                     question: 'How long does a luxury bathroom renovation take in Eindhoven?',
-                    answer: 'We work with a strict schedule and turn-key delivery. A complete luxury bathroom renovation typically takes exactly 2 to 4 weeks, without unexpected delays.'
+                    answer: 'We work with a strict schedule and turn-key delivery. A complete luxury bathroom renovation typically takes 3 to 5 weeks.'
                 },
                 {
                     question: 'What guarantees do you offer for waterproofing and sealant work?',
-                    answer: 'You will receive a 100% waterproof guarantee from us. We work exclusively with A-brand building materials, high-quality epoxy grouts, and professional sealant work to completely rule out future leaks.'
+                    answer: 'You will receive a 100% waterproof guarantee on the bathroom construction for 5 years. We work exclusively with A-brand building materials, high-quality grouts, and professional sealant work to completely rule out future leaks.'
                 },
 
                 {

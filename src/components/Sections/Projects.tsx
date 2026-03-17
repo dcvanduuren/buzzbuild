@@ -9,22 +9,22 @@ const projectData = [
     images: ["1.webp", "FullSizeRender (1).webp", "FullSizeRender (2).webp", "FullSizeRender.webp", "IMG_2284.webp", "IMG_2327 (1).webp", "IMG_2332.webp", "IMG_2338.webp"]
   },
   {
-    id: 2,
-    title: 'Badkamer 2',
-    folder: 'badkamer 2',
-    images: ["1.webp", "2.webp", "IMG_5633.webp", "IMG_5640.webp", "IMG_5649.webp"]
-  },
-  {
     id: 3,
     title: 'Badkamer 3',
     folder: 'badkamer 3',
     images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "R0001041.webp", "R0001052.webp", "R0001056.webp", "R0001059.webp"]
   },
   {
+    id: 2,
+    title: 'Badkamer 2',
+    folder: 'badkamer 2',
+    images: ["1.webp", "2.webp", "IMG_5633.webp", "IMG_5640.webp", "IMG_5649.webp"]
+  },
+  {
     id: 4,
     title: 'Badkamer 4',
     folder: 'badkamer 4',
-    images: ["1.webp", "IMG_1640.webp"]
+    images: ["Badkamer_femke_Clean_1 (1).webp", "Badkamer_femke_Clean_2 (1).webp"]
   }
 ];
 

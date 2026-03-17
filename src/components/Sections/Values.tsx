@@ -1,4 +1,3 @@
-import React from 'react';
 import { TranslationData } from '../../translations';
 
 interface ValuesProps {

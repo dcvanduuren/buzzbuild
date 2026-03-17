@@ -1,4 +1,3 @@
-import React from 'react';
 import { TranslationData } from '../../translations';
 
 interface ServicesProps {
@@ -19,7 +18,8 @@ export const Services = ({ t, mailtoLink }: ServicesProps) => (
         <div className="glass-card" style={{
           padding: '40px',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          height: '100%'
         }}>
           <h3 className="text-accent" style={{ fontSize: '1rem', marginBottom: '24px' }}>{t.services.card1.title}</h3>
 
@@ -51,7 +51,8 @@ export const Services = ({ t, mailtoLink }: ServicesProps) => (
         <div className="glass-card" style={{
           padding: '40px',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          height: '100%'
         }}>
           <h3 className="text-accent" style={{ fontSize: '1rem', marginBottom: '24px' }}>{t.services.card2.title}</h3>
 

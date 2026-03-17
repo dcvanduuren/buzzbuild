@@ -28,8 +28,9 @@ export const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: Heade
 
         {/* Center: Desktop Nav */}
         <nav className={`main-nav ${menuOpen ? 'mobile-open' : ''}`}>
-          <a href="#waarden" onClick={(e) => onNavClick(e, 'waarden')}>{t.nav.waarden}</a>
           <a href="#projecten" onClick={(e) => onNavClick(e, 'projecten')}>{t.nav.projecten}</a>
+          <a href="#waarden" onClick={(e) => onNavClick(e, 'waarden')}>{t.nav.waarden}</a>
+          <a href="#resultaten" onClick={(e) => onNavClick(e, 'resultaten')}>{t.nav.resultaten}</a>
           <a href="#diensten" onClick={(e) => onNavClick(e, 'diensten')}>{t.nav.diensten}</a>
           <a href="#over" onClick={(e) => onNavClick(e, 'over')}>{t.nav.over}</a>
         </nav>

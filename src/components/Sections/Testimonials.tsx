@@ -1,4 +1,3 @@
-import React from 'react';
 import { TranslationData } from '../../translations';
 import { StarIcon } from '../UI/Icons';
 
@@ -12,7 +11,7 @@ export const Testimonials = ({ t }: TestimonialsProps) => {
   const seamlessReviews = [...reviews, ...reviews];
 
   return (
-    <section className="section-padding" style={{ overflow: 'hidden' }}>
+    <section id="resultaten" className="section-padding" style={{ overflow: 'hidden' }}>
       <div className="container">
         <div className="section-header text-center">
           <h2>{t.testimonials.title}</h2>

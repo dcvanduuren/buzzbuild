@@ -6,7 +6,7 @@ interface MissionProps {
 
 export const Mission = ({ t }: MissionProps) => (
   <section id="missie" className="mission-padding">
-    <div className="container" style={{ display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap' }}>
+    <div className="container mission-grid" style={{ display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap' }}>
 
       {/* Left side: Text */}
       <div style={{ flex: '1 1 500px' }}>
@@ -23,21 +23,24 @@ export const Mission = ({ t }: MissionProps) => (
 
       {/* Right side: Handshake Photo */}
       <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center' }}>
-        <div style={{
+        <div className="glass-card" style={{
           position: 'relative',
           width: '100%',
           maxWidth: '500px',
           aspectRatio: '1/1',
-          borderRadius: 'var(--radius-lg)',
-          overflow: 'hidden',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-          border: '1px solid rgba(255,255,255,0.05)'
+          padding: '16px', // Matches project card padding
+          overflow: 'hidden'
         }}>
           <img
             src="/assets/images/optimized/handshake.webp"
             alt="Persoonlijke aanpak: Handdruk Buzzbuild"
             loading="lazy"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              borderRadius: 'var(--radius-md)' // Matches project image radius
+            }}
           />
         </div>
       </div>
