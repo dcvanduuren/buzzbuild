@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export const Hero = ({ t, handleNavClick }: HeroProps) => (
-  <section id="hero" className="hero-padding" style={{ height: '100vh', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingBottom: '4vh', overflow: 'hidden' }}>
+  <section id="hero">
     <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       
       {/* Stylized Logo Title */}

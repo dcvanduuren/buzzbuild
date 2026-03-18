@@ -424,6 +424,20 @@ button {
 section {
   padding: 100px 0;
   position: relative;
+  overflow: visible; /* Ensure content visibility across all sections */
+}
+
+#hero {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: visible !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* The "invisible line" separator */
+  padding-bottom: 4vh;
 }
 
 /* Utilities */
@@ -718,12 +732,18 @@ ul.bullet-list li {
   }
 
   #hero {
+    min-height: 100vh;
+    height: auto !important; /* Allow expansion on mobile */
     align-items: center !important;
     text-align: center;
+    padding-top: 120px !important; /* More top space for header */
+    padding-bottom: 100px !important; /* More bottom space for arrow visibility */
+    overflow: visible !important;
   }
 
   .hero-container {
     align-items: center !important;
+    padding: 0 20px !important;
   }
 
   .hero-title-wrapper {
