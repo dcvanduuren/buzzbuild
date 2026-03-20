@@ -118,7 +118,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-first"
           style={{
             ...orbBaseStyle,
-            top: "5%",
+            top: "15%",
             left: "-10vw",
             background: `radial-gradient(circle at center, rgba(${firstColor}, 0.5) 0, rgba(${firstColor}, 0) 50%) no-repeat`,
             transformOrigin: "center center",
@@ -130,7 +130,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-second"
           style={{
             ...orbBaseStyle,
-            top: "20%",
+            top: "28%",
             right: "-20vw",
             background: `radial-gradient(circle at center, rgba(${secondColor}, 0.4) 0, rgba(${secondColor}, 0) 50%) no-repeat`,
             transformOrigin: "left center",
@@ -142,7 +142,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-third"
           style={{
             ...orbBaseStyle,
-            top: "35%",
+            top: "42%",
             left: "-15vw",
             background: `radial-gradient(circle at center, rgba(${thirdColor}, 0.6) 0, rgba(${thirdColor}, 0) 50%) no-repeat`,
             transformOrigin: "right center",
@@ -154,7 +154,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-fourth"
           style={{
             ...orbBaseStyle,
-            top: "50%",
+            top: "55%",
             right: "-30vw",
             background: `radial-gradient(circle at center, rgba(${fourthColor}, 0.35) 0, rgba(${fourthColor}, 0) 50%) no-repeat`,
             transformOrigin: "center left",
@@ -166,7 +166,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-fifth"
           style={{
             ...orbBaseStyle,
-            top: "65%",
+            top: "70%",
             left: "-20vw",
             background: `radial-gradient(circle at center, rgba(${fifthColor}, 0.5) 0, rgba(${fifthColor}, 0) 50%) no-repeat`,
             transformOrigin: "center right",
@@ -178,7 +178,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-second"
           style={{
             ...orbBaseStyle,
-            top: "80%",
+            top: "85%",
             right: "0vw",
             background: `radial-gradient(circle at center, rgba(${firstColor}, 0.45) 0, rgba(${firstColor}, 0) 50%) no-repeat`,
             transformOrigin: "center center",
@@ -190,7 +190,7 @@ export const BackgroundGradientAnimation = ({
           className="animate-fourth"
           style={{
             ...orbBaseStyle,
-            top: "92%",
+            top: "95%",
             left: "10vw",
             background: `radial-gradient(circle at center, rgba(${secondColor}, 0.55) 0, rgba(${secondColor}, 0) 50%) no-repeat`,
             transformOrigin: "top right",

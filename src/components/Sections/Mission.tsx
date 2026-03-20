@@ -28,8 +28,10 @@ export const Mission = ({ t }: MissionProps) => (
           width: '100%',
           maxWidth: '500px',
           aspectRatio: '1/1',
-          padding: '16px', // Matches project card padding
-          overflow: 'hidden'
+          padding: '0', // Removed blue border padding
+          background: 'transparent', // Removed blue background
+          overflow: 'hidden',
+          border: '1px solid rgba(255, 255, 255, 0.2)' // Enhanced silver lining
         }}>
           <img
             src="/assets/images/optimized/handshake.webp"
@@ -39,7 +41,7 @@ export const Mission = ({ t }: MissionProps) => (
               width: '100%', 
               height: '100%', 
               objectFit: 'cover',
-              borderRadius: 'var(--radius-md)' // Matches project image radius
+              borderRadius: 'var(--radius-lg)' // Matches glass-card radius for seamless fit
             }}
           />
         </div>

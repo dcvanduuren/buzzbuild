@@ -10,8 +10,41 @@ interface HeroProps {
 }
 
 export const Hero = ({ t, handleNavClick }: HeroProps) => (
-  <section id="hero">
-    <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+  <section id="hero" style={{ position: 'relative' }}>
+    {/* Immersive Background Image Wrapper with mask fade */}
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: -1,
+      maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+      WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)'
+    }}>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: `url('/assets/images/badkamer 3/4.JPG')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        zIndex: -2,
+      }} />
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(to bottom, rgba(7, 28, 46, 0.9) 0%, rgba(7, 28, 46, 0.4) 20%, rgba(7, 28, 46, 0.4) 75%, var(--bg-primary) 100%)',
+        zIndex: -1
+      }} />
+    </div>
+    
+    <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
       
       {/* Stylized Logo Title */}
       <FadeIn delay={0.1}>

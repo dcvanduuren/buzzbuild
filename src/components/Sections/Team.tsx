@@ -15,16 +15,19 @@ export const Team = ({ t }: TeamProps) => (
       <div className="responsive-grid grid-2" style={{ gap: '24px', maxWidth: '800px', margin: '0 auto' }}>
         {/* Profile 1 */}
         <div className="glass-card" style={{
-          padding: '16px',
+          padding: '0',
+          background: 'transparent',
           aspectRatio: '3/4',
-          position: 'relative'
+          position: 'relative',
+          overflow: 'hidden',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
         }}>
-          <div style={{ width: '100%', height: '100%', borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative' }}>
+          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <img
               src="/assets/images/optimized/founder images/Diederik_Gen.webp"
               alt="Diederik van Duuren"
               loading="lazy"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'var(--radius-lg)' }}
             />
             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '30px', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)', textAlign: 'center' }}>
               <h3 style={{ margin: '0 0 4px', fontSize: '1.2rem' }}>Diederik van Duuren</h3>
@@ -34,16 +37,19 @@ export const Team = ({ t }: TeamProps) => (
         </div>
         {/* Profile 2 */}
         <div className="glass-card" style={{
-          padding: '16px',
+          padding: '0',
+          background: 'transparent',
           aspectRatio: '3/4',
-          position: 'relative'
+          position: 'relative',
+          overflow: 'hidden',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
         }}>
-          <div style={{ width: '100%', height: '100%', borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative' }}>
+          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <img
               src="/assets/images/optimized/founder images/Lodewijk_Gen.webp"
               alt="Lodewijk van Duuren"
               loading="lazy"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'var(--radius-lg)' }}
             />
             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '30px', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)', textAlign: 'center' }}>
               <h3 style={{ margin: '0 0 4px', fontSize: '1.2rem' }}>Lodewijk van Duuren</h3>

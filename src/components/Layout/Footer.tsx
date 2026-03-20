@@ -1,6 +1,5 @@
 import React from 'react';
 import { TranslationData } from '../../translations';
-import { LogoIcon } from '../UI/Icons';
 import { TrustBadges } from '../Conversion/TrustBadges';
 
 interface FooterProps {
@@ -13,17 +12,12 @@ export const Footer = ({ t, handleNavClick }: FooterProps) => (
     <div className="container">
       <div className="footer-content">
         <div className="footer-left">
-          <div className="logo-container">
-            <LogoIcon />
-          </div>
           <div>
             <a href="tel:+31638715895" className="btn btn-primary" style={{ padding: '10px 24px', opacity: 0.9 }}>
               {t.footer.btnBuzz}
             </a>
           </div>
-          <div style={{ transform: 'scale(0.85)', transformOrigin: 'left center' }}>
-            <TrustBadges t={t} />
-          </div>
+          <TrustBadges t={t} />
         </div>
 
         <div className="footer-right">

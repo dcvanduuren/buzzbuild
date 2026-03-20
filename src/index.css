@@ -72,16 +72,20 @@ body {
 
 .glass-card {
   padding: 40px;
-  background: var(--card-bg);
+  background: rgba(15, 20, 30, 0.55);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: all var(--transition-normal);
-  border: none;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glass-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(20, 25, 35, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 45px -10px rgba(0, 0, 0, 0.8);
 }
 
 /* Infinite Carousel */
@@ -126,11 +130,10 @@ body {
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 3/4;
-  padding: 16px;
-  background: var(--card-bg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all var(--transition-normal);
-  border: none;
 }
 
 .project-card:hover {
@@ -143,7 +146,7 @@ body {
   height: 100%;
   object-fit: cover;
   image-orientation: from-image;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   transition: transform 0.5s ease;
 }
 
@@ -153,12 +156,12 @@ body {
 
 .project-card-overlay {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  background: rgba(7, 28, 46, 0.8);
-  border-radius: var(--radius-md);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 28, 46, 0.85);
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,7 +437,6 @@ section {
   justify-content: center;
   position: relative;
   overflow: visible !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* The "invisible line" separator */
   padding-bottom: 4vh;
 }
 
@@ -687,6 +689,15 @@ ul.bullet-list li {
 }
 
 @media (max-width: 768px) {
+  .header-wrapper {
+    width: 94%;
+    max-width: none;
+  }
+
+
+  .container {
+    padding: 0 28px;
+  }
 
   /* Grids collapse to 1 column */
   .grid-3,
@@ -741,7 +752,7 @@ ul.bullet-list li {
 
   .hero-container {
     align-items: center !important;
-    padding: 0 20px !important;
+    padding: 0 28px !important;
   }
 
   .hero-title-wrapper {
@@ -763,12 +774,29 @@ ul.bullet-list li {
     padding: 50px 0 !important;
   }
 
-  /* Stack buttons */
+  /* Row buttons for calmness and space */
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 24px; /* reduced from 40px */
+    gap: 12px;
+    margin-bottom: 24px;
     width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: auto;
+    flex: 1;
+    white-space: nowrap;
+    padding: 12px 16px;
+    font-size: 0.78rem; 
+    letter-spacing: 0.01em;
+  }
+
+  .hero-buttons .btn-primary {
+    flex: 1.4; /* Give the primary button more presence */
+    padding: 14px 28px; /* Extra padding as requested */
+    font-weight: 700;
   }
 
   .hero-h1 {
@@ -792,7 +820,7 @@ ul.bullet-list li {
   }
 
   .hero-buttons .btn {
-    width: 100%;
+    width: auto;
   }
 
   /* Carousel */
@@ -800,12 +828,14 @@ ul.bullet-list li {
     width: 85vw !important;
   }
 
-  /* Generic padding cuts */
+  /* Generic padding cuts - removed !important to allow specific overrides */
   .glass-card {
-    padding: 24px !important;
+    padding: 24px;
   }
 
+  /* Ensure project cards keep their edge-to-edge look on mobile */
   .project-card {
+    padding: 0 !important;
     aspect-ratio: 4/5;
   }
 
@@ -823,10 +853,11 @@ ul.bullet-list li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 18px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-full);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 60px; /* Wider button to fill space */
   }
 
   .main-nav {
@@ -898,23 +929,74 @@ ul.bullet-list li {
     right: 0;
   }
 
-  /* Footer adjustments */
+  /* Footer adjustments - Perfectly aligned 2-column layout */
   .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+    align-items: stretch;
+  }
+
+  .footer-left {
+    display: flex;
     flex-direction: column;
-    gap: 32px;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
   }
 
   .footer-right {
-    flex-direction: column; /* Stack vertically like the screenshot */
-    align-items: center;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 8px; /* Closed up even further as requested */
+    text-align: right;
   }
 
   .footer-right a {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
+    opacity: 0.8;
+  }
+
+  .footer-left .btn {
+    padding: 10px 20px !important;
+    font-size: 0.85rem;
+  }
+
+  .footer-left > div:first-child {
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  /* Neat vertical stacking for trust badges on mobile */
+  .trust-badges-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    margin: 0 !important; /* Reset margin for perfect alignment */
+    padding-top: 16px;
+    width: 100%;
+  }
+
+  .trust-badge {
+    font-size: 0.75rem !important;
+  }
+
+  /* Specifically override hero badges to be horizontal next to each other */
+  #hero .trust-badges-container {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 12px 20px !important;
+    width: auto !important;
+  }
+
+  #hero .trust-badge {
+    font-size: 0.7rem !important;
+    white-space: nowrap;
   }
 }
 
