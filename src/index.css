@@ -710,8 +710,10 @@ ul.bullet-list li {
     text-align: center;
     font-size: clamp(4.2rem, 16vw, 6.5rem); 
     width: 100%;
-    letter-spacing: -0.01em; /* Relaxed from -0.04em to give more air */
-    font-weight: 700; /* Slightly less heavy than desktop (800) to avoid 'sticking' */
+    letter-spacing: 0; /* Neutral spacing to avoid Android rendering quirks */
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   .mission-title {
