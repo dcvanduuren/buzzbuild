@@ -44,7 +44,7 @@ export const SchemaManager: React.FC = () => {
 
     return (
         <Helmet>
-            <title>Buzzbuild | High-end aannemer & badkamer renovaties Eindhoven</title>
+            <title>Buzzbuild | Aannemer & badkamer renovaties Eindhoven</title>
             <meta name="description" content="Buzzbuild is de betrouwbare aannemer in Eindhoven, gespecialiseerd in hoogwaardige badkamerrenovaties, duurzame verbouwingen en timmerwerk op maat." />
             <script type="application/ld+json">
                 {JSON.stringify(schema)}

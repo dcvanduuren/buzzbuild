@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { translations, SupportedLang } from './translations';
 import { SchemaManager } from './components/SEO/SchemaManager';
 import { Header } from './components/Layout/Header';
@@ -53,6 +55,8 @@ function App() {
       </main>
       <Footer t={t} handleNavClick={handleNavClick} />
       </div>
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }

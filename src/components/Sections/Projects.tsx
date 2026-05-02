@@ -18,7 +18,12 @@ const projectData = [
     id: 2,
     title: 'Badkamer 2',
     folder: 'badkamer 2',
-    images: ["1.webp", "2.webp", "IMG_5633.webp", "IMG_5640.webp", "IMG_5649.webp"]
+    images: [
+      "Manon 1.webp",
+      "Manon 2.webp",
+      "Manon 3.webp",
+      "Manon 4.webp"
+    ]
   },
   {
     id: 4,

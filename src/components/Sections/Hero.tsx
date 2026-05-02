@@ -28,7 +28,7 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => (
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundImage: `url('/assets/images/badkamer 3/4.JPG')`,
+        backgroundImage: `url('/assets/images/badkamer 3/4.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         zIndex: -2,

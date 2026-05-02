@@ -53,7 +53,30 @@ export const translations = {
         testimonials: {
             title: 'Onze resultaten',
             subtitle: 'Hoor wat onze klanten te zeggen hebben.',
-            emptyText: 'Nog geen beoordeling'
+            reviews: [
+                {
+                    name: 'Mieke Bierbooms',
+                    date: '3 weken geleden',
+                    text: 'Lodewijk en team hebben ons heel goed geholpen, ze hebben bij ons de vloer vervangen (kruipruimte afgevuld met schuimbeton), afwaterprobleem riool opgelost, schoorsteen gesloopt (binnen), vloerverwarming gelegd, cv leidingen omgelegd, gestuukt en badkamer muur en vloer betegeld, en de boel haarscherp afgekit, vakwerk! Het zijn aanpakkers, probleemoplossers en werken heel netjes (ruimen elke dag op, heel fijn!). Ook communiceren en overleggen ze goed en doen ze wat ze zeggen. Prima bedrijf, ik kan ze aanbevelen!'
+                },
+                {
+                    name: 'Bob Verniers',
+                    date: '8 maanden geleden',
+                    text: 'Great Team'
+                },
+                {
+                    name: 'Manon Ritten',
+                    date: 'een maand geleden',
+                    text: 'Heel erg blij met mijn nieuwe badkamer. Van begin tot eind goede en duidelijke communicatie, en erg meedenkend over wat wel en niet mogelijk was bij de beperkte ruimte.'
+                },
+                {
+                    name: 'peter-gabi hoesbergen',
+                    date: 'een maand geleden',
+                    text: '"Zeer tevreden over Buzzbuild. Verschillende werkzaamheden laten doen tijdens de verbouwing van ons huis. De communicatie verliep soepel en de afspraken werden nagekomen . Professioneel en oplossingsgericht ! Zeker een aanrader!'
+                }
+            ],
+            readMore: 'Lees meer',
+            showLess: 'Minder weergeven'
         },
         services: {
             title: 'Onze diensten',
@@ -61,7 +84,7 @@ export const translations = {
             btnEmail: 'E-mail ons',
             card1: {
                 title: 'Uurbasis',
-                price: '€50',
+                price: '€60',
                 from: 'Vanaf:',
                 unit: '/Uur',
                 body: 'Voor kleinere projecten of urgente taken bieden wij een uurtarief aan. Hierdoor kunnen we snel aan de slag zonder ingewikkelde offertes of lange planningsfases.',
@@ -153,8 +176,8 @@ export const translations = {
             whatsapp: 'WhatsApp'
         },
         hero: {
-            title: 'The leading Contractor specializing in high-quality bathroom renovations | Eindhoven region',
-            subtitle: 'We are happy to visit you for a no-obligation consultation to discuss the possibilities for your project.',
+            title: 'Contracting company specializing in high-quality bathroom renovations in Eindhoven and surroundings',
+            subtitle: "We'd be happy to visit you, free of obligation, to discuss the possibilities for your project.",
             btnServices: 'Request a Quote',
             btnWork: 'Our Work'
         },
@@ -197,7 +220,30 @@ export const translations = {
         testimonials: {
             title: 'Our Results',
             subtitle: 'Hear what our clients have to say.',
-            emptyText: 'No reviews yet'
+            reviews: [
+                {
+                    name: 'Mieke Bierbooms',
+                    date: '3 weeks ago',
+                    text: 'Lodewijk and team have helped us very well, they replaced the floor for us (crawl space filled with foam concrete), solved drainage problem sewer, demolished chimney (inside), laid underfloor heating, rerouted central heating pipes, plastered and tiled bathroom wall and floor, and sealed everything razor-sharp, craftsmanship! They are go-getters, problem solvers and work very neatly (clean up every day, very nice!). They also communicate and consult well and do what they say. Great company, I can recommend them!'
+                },
+                {
+                    name: 'Bob Verniers',
+                    date: '8 months ago',
+                    text: 'Great Team'
+                },
+                {
+                    name: 'Manon Ritten',
+                    date: 'a month ago',
+                    text: 'Very happy with my new bathroom. Good and clear communication from start to finish, and very helpful in thinking about what was and wasn\'t possible given the limited space.'
+                },
+                {
+                    name: 'peter-gabi hoesbergen',
+                    date: 'a month ago',
+                    text: '"Very satisfied with Buzzbuild. Had various tasks done during the renovation of our house. Communication went smoothly and agreements were kept. Professional and solution-oriented! Definitely recommended!'
+                }
+            ],
+            readMore: 'Read more',
+            showLess: 'Show less'
         },
         services: {
             title: 'Our Services',
@@ -205,7 +251,7 @@ export const translations = {
             btnEmail: 'Email Us',
             card1: {
                 title: 'Hourly Basis',
-                price: '€50',
+                price: '€60',
                 from: 'From:',
                 unit: '/Hour',
                 body: 'For smaller projects or urgent tasks, we offer an hourly rate. This allows us to get started quickly without complicated quotes or long planning phases.',
