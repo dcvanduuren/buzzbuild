@@ -707,8 +707,11 @@ ul.bullet-list li {
 
   /* Typography scales down */
   .hero-title {
-    justify-content: center;
-    width: 100%; /* Ensure centering works across the full width */
+    text-align: center;
+    font-size: clamp(4.2rem, 16vw, 6.5rem); 
+    width: 100%;
+    letter-spacing: -0.01em; /* Relaxed from -0.04em to give more air */
+    font-weight: 700; /* Slightly less heavy than desktop (800) to avoid 'sticking' */
   }
 
   .mission-title {

@@ -49,9 +49,8 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => (
       {/* Stylized Logo Title */}
       <FadeIn delay={0.1}>
         <div className="hero-title-wrapper" style={{ marginBottom: '24px' }}>
-          <div className="title-font hero-title" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
-            <span style={{ color: 'var(--accent-primary)' }}>Buzz</span>
-            <span style={{ color: 'var(--text-main)' }}>build</span>
+          <div className="title-font hero-title">
+            <span style={{ color: 'var(--accent-primary)' }}>Buzz</span>build
           </div>
         </div>
       </FadeIn>
