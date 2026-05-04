@@ -73,10 +73,16 @@ export const translations = {
                     name: 'peter-gabi hoesbergen',
                     date: 'een maand geleden',
                     text: '"Zeer tevreden over Buzzbuild. Verschillende werkzaamheden laten doen tijdens de verbouwing van ons huis. De communicatie verliep soepel en de afspraken werden nagekomen . Professioneel en oplossingsgericht ! Zeker een aanrader!'
+                },
+                {
+                    name: 'Juliette Hernandez',
+                    date: '1 dag geleden',
+                    text: 'Wij hebben in 2025 onze badkamer volledig opnieuw laten verbouwen en kijken daar met enorm veel tevredenheid op terug. Vanaf het eerste moment tot en met de oplevering is alles zeer prettig verlopen. Er werd goed geluisterd naar onze wensen en ideeën, en deze zijn met veel vakmanschap en oog voor detail tot leven gebracht.'
                 }
             ],
             readMore: 'Lees meer',
-            showLess: 'Minder weergeven'
+            showLess: 'Minder weergeven',
+            viewAllGoogle: 'Bekijk alle reviews op Google'
         },
         services: {
             title: 'Onze diensten',
@@ -240,10 +246,16 @@ export const translations = {
                     name: 'peter-gabi hoesbergen',
                     date: 'a month ago',
                     text: '"Very satisfied with Buzzbuild. Had various tasks done during the renovation of our house. Communication went smoothly and agreements were kept. Professional and solution-oriented! Definitely recommended!'
+                },
+                {
+                    name: 'Juliette Hernandez',
+                    date: '1 day ago',
+                    text: 'We had our bathroom completely renovated in 2025 and look back on it with great satisfaction. From the first moment until completion, everything went very smoothly. Our wishes and ideas were carefully listened to and brought to life with great craftsmanship and an eye for detail.'
                 }
             ],
             readMore: 'Read more',
-            showLess: 'Show less'
+            showLess: 'Show less',
+            viewAllGoogle: 'View all reviews on Google'
         },
         services: {
             title: 'Our Services',

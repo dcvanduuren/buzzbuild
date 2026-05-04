@@ -16,6 +16,8 @@ import { Footer } from './components/Layout/Footer';
 import { BackgroundGlows } from './components/Layout/BackgroundGlows';
 import './index.css';
 
+import { WhatsAppButton } from './components/UI/WhatsAppButton';
+
 function App() {
   const [lang, setLang] = useState<SupportedLang>('nl');
   const t = translations[lang];
@@ -57,6 +59,7 @@ function App() {
       </div>
       <Analytics />
       <SpeedInsights />
+      <WhatsAppButton />
     </div>
   );
 }

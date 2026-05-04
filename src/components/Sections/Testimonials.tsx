@@ -87,6 +87,8 @@ const ReviewCard = ({ item, t }: { item: any; t: TranslationData }) => {
   );
 };
 
+import { GoogleIcon } from '../UI/Icons';
+
 export const Testimonials = ({ t }: TestimonialsProps) => {
   const reviews = t.testimonials.reviews;
   // We duplicate the array to allow for a seamless infinite scroll loop
@@ -106,6 +108,19 @@ export const Testimonials = ({ t }: TestimonialsProps) => {
               <ReviewCard key={`${item.name}-${index}`} item={item} t={t} />
             ))}
           </div>
+        </div>
+
+        <div style={{ marginTop: '48px', display: 'flex', justifyContent: 'center' }}>
+          <a 
+            href="https://www.google.com/maps/search/Buzzbuild+Eindhoven" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn btn-outline"
+            style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 24px' }}
+          >
+            <GoogleIcon />
+            {t.testimonials.viewAllGoogle}
+          </a>
         </div>
       </div>
     </section>
