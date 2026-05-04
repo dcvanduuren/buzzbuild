@@ -53,11 +53,6 @@ export const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: Heade
           >
             {lang.toUpperCase()}
           </button>
-
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm wa-btn" style={{ padding: '8px 16px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span className="wa-icon-wrapper"><WhatsAppIcon /></span>
-            <span className="wa-text">{t.nav.whatsapp}</span>
-          </a>
         </div>
       </header>
     </div>
