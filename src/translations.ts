@@ -5,8 +5,7 @@ export const translations = {
             projecten: 'Projecten',
             resultaten: 'Resultaten',
             diensten: 'Diensten',
-            over: 'Over Ons',
-            whatsapp: 'WhatsApp'
+            over: 'Over Ons'
         },
         hero: {
             title: 'Aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken',
@@ -178,8 +177,7 @@ export const translations = {
             projecten: 'Projects',
             resultaten: 'Results',
             diensten: 'Services',
-            over: 'About Us',
-            whatsapp: 'WhatsApp'
+            over: 'About Us'
         },
         hero: {
             title: 'Contracting company specializing in high-quality bathroom renovations in Eindhoven and surroundings',
