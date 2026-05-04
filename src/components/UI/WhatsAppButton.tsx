@@ -15,10 +15,7 @@ export const WhatsAppButton = () => {
       className="whatsapp-float"
       aria-label="WhatsApp"
     >
-      <div className="whatsapp-content">
-         <WhatsAppIcon />
-         <span className="whatsapp-text">Offerte aanvragen</span>
-      </div>
+      <WhatsAppIcon />
     </a>
   );
 };
