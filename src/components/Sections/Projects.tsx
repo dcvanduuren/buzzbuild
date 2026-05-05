@@ -119,7 +119,7 @@ export const Projects = ({ t }: ProjectsProps) => {
 
         <div style={{ marginTop: '48px', display: 'flex', justifyContent: 'center' }}>
           <a 
-            href="https://www.instagram.com/buzzbuild.nl/" 
+            href="https://www.instagram.com/buzzbuild.projects/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn btn-outline"
