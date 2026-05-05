@@ -47,7 +47,8 @@ export const translations = {
         },
         projects: {
             title: 'Onze Projecten',
-            subtitle: 'Ontdek onze vakkundig uitgevoerde projecten.'
+            subtitle: 'Ontdek onze vakkundig uitgevoerde projecten.',
+            viewAllInstagram: 'Bekijk alle projecten op Instagram'
         },
         testimonials: {
             title: 'Onze resultaten',
@@ -224,7 +225,8 @@ export const translations = {
         },
         projects: {
             title: 'Our Projects',
-            subtitle: 'Discover our expertly executed projects.'
+            subtitle: 'Discover our expertly executed projects.',
+            viewAllInstagram: 'View all projects on Instagram'
         },
         testimonials: {
             title: 'Our Results',

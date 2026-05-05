@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TranslationData } from '../../translations';
+import { InstagramIcon } from '../UI/Icons';
 
 const projectData = [
   {
@@ -115,8 +116,20 @@ export const Projects = ({ t }: ProjectsProps) => {
             </div>
           ))}
         </div>
-      </div>
 
+        <div style={{ marginTop: '48px', display: 'flex', justifyContent: 'center' }}>
+          <a 
+            href="https://www.instagram.com/buzzbuild.nl/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn btn-outline"
+            style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 24px' }}
+          >
+            <InstagramIcon />
+            {t.projects.viewAllInstagram}
+          </a>
+        </div>
+      </div>
       {activeProject && (
         <div className="modal-overlay" onClick={closeProject}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

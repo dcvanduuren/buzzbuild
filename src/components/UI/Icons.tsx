@@ -60,3 +60,11 @@ export const GoogleIcon = () => (
     <path d="M12 4.19c1.69 0 3.21.58 4.4 1.72l3.31-3.31C17.71 1.03 15.11 0 12 0 7.19 0 3.01 2.75 1.08 6.18L5.3 9.44c.95-2.83 3.59-4.93 6.7-4.93z" fill="#EA4335"/>
   </svg>
 );
+
+export const InstagramIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
