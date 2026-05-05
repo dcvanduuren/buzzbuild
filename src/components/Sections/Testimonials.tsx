@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { TranslationData } from '../../translations';
 
 interface TestimonialsProps {
@@ -92,7 +92,76 @@ import { GoogleIcon } from '../UI/Icons';
 export const Testimonials = ({ t }: TestimonialsProps) => {
   const reviews = t.testimonials.reviews;
   // We duplicate the array to allow for a seamless infinite scroll loop
-  const seamlessReviews = [...reviews, ...reviews];
+  const seamlessReviews = [...reviews, ...reviews, ...reviews];
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    let animationId: number;
+    const container = containerRef.current;
+    
+    const animate = () => {
+      if (container && !isDragging && !isHovering) {
+        container.scrollLeft += 0.5;
+        
+        // Reset scroll position to create infinite effect
+        if (container.scrollLeft >= container.scrollWidth / 3) {
+          container.scrollLeft = 0;
+        }
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [isDragging, isHovering]);
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const onMouseLeave = () => {
+    setIsDragging(false);
+    setIsHovering(false);
+  };
+
+  const onMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !containerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    if (!containerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !containerRef.current) return;
+    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const onTouchEnd = () => {
+    setIsDragging(false);
+  };
 
   return (
     <section id="resultaten" className="section-padding" style={{ overflow: 'hidden' }}>
@@ -102,7 +171,18 @@ export const Testimonials = ({ t }: TestimonialsProps) => {
           <p className="subtext" style={{ color: 'var(--text-muted)' }}>{t.testimonials.subtitle}</p>
         </div>
 
-        <div className="carousel-container">
+        <div 
+          className="carousel-container"
+          ref={containerRef}
+          onMouseDown={onMouseDown}
+          onMouseLeave={onMouseLeave}
+          onMouseUp={onMouseUp}
+          onMouseMove={onMouseMove}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+          onMouseEnter={() => setIsHovering(true)}
+        >
           <div className="carousel-track">
             {seamlessReviews.map((item, index) => (
               <ReviewCard key={`${item.name}-${index}`} item={item} t={t} />

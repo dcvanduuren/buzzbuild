@@ -77,6 +77,11 @@ export const translations = {
                     name: 'Juliette Hernandez',
                     date: '1 dag geleden',
                     text: 'Wij hebben in 2025 onze badkamer volledig opnieuw laten verbouwen en kijken daar met enorm veel tevredenheid op terug. Vanaf het eerste moment tot en met de oplevering is alles zeer prettig verlopen. Er werd goed geluisterd naar onze wensen en ideeën, en deze zijn met veel vakmanschap en oog voor detail tot leven gebracht.'
+                },
+                {
+                    name: 'Jesse Peeters',
+                    date: '11 minuten geleden',
+                    text: 'Lodewijk en Diederik hebben fantastisch werk geleverd met de verbouwing van mijn badkamer en toilet! Zeer professioneel werk, altijd heldere communicatie en goed meedenkend om samen tot het voor mij beste resultaat te komen'
                 }
             ],
             readMore: 'Lees meer',
@@ -249,6 +254,11 @@ export const translations = {
                     name: 'Juliette Hernandez',
                     date: '1 day ago',
                     text: 'We had our bathroom completely renovated in 2025 and look back on it with great satisfaction. From the first moment until completion, everything went very smoothly. Our wishes and ideas were carefully listened to and brought to life with great craftsmanship and an eye for detail.'
+                },
+                {
+                    name: 'Jesse Peeters',
+                    date: '11 minutes ago',
+                    text: 'Lodewijk and Diederik did a fantastic job with the renovation of my bathroom and toilet! Very professional work, always clear communication and thinking along well to achieve the best result for me together'
                 }
             ],
             readMore: 'Read more',
