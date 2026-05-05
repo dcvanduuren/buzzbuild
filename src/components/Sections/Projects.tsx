@@ -31,6 +31,18 @@ const projectData = [
     title: 'Badkamer 4',
     folder: 'badkamer 4',
     images: ["Badkamer_femke_Clean_1 (1).webp", "Badkamer_femke_Clean_2 (1).webp"]
+  },
+  {
+    id: 5,
+    title: 'Badkamer 5',
+    folder: 'badkamer 5',
+    images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp"]
+  },
+  {
+    id: 6,
+    title: 'Badkamer 6',
+    folder: 'badkamer 6',
+    images: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp"]
   }
 ];
 
