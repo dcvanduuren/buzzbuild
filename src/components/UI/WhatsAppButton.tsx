@@ -9,9 +9,8 @@ export const WhatsAppButton = () => {
 
   const handleClick = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'whatsapp_click', {
-        'event_category': 'Contact',
-        'event_label': 'WhatsApp Button Click'
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18038797105/3YUtCOHdwascELHmyJlD'
       });
     }
   };
