@@ -7,6 +7,15 @@ export const WhatsAppButton = () => {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
+  const handleClick = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'whatsapp_click', {
+        'event_category': 'Contact',
+        'event_label': 'WhatsApp Button Click'
+      });
+    }
+  };
+
   return (
     <a
       href={whatsappUrl}
@@ -14,6 +23,7 @@ export const WhatsAppButton = () => {
       rel="noopener noreferrer"
       className="whatsapp-float"
       aria-label="WhatsApp"
+      onClick={handleClick}
     >
       <WhatsAppIcon />
     </a>
