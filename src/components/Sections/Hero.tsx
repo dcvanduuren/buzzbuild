@@ -9,8 +9,33 @@ interface HeroProps {
   handleNavClick: (e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>, target: string) => void;
 }
 
-export const Hero = ({ t, handleNavClick }: HeroProps) => (
-  <section id="hero" style={{ position: 'relative' }}>
+export const Hero = ({ t, handleNavClick }: HeroProps) => {
+  const handleEmailClick = () => {
+    console.log("Email link aangeklikt in Hero, gtag checken...");
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'email_click', {
+        'send_to': 'AW-18038797105',
+        'event_callback': () => {
+          console.log("Google heeft de conversie (email) succesvol ontvangen!");
+        }
+      });
+    }
+  };
+
+  const handlePhoneClick = () => {
+    console.log("Telefoon link aangeklikt in Hero, gtag checken...");
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'phone_click', {
+        'send_to': 'AW-18038797105',
+        'event_callback': () => {
+          console.log("Google heeft de conversie (telefoon) succesvol ontvangen!");
+        }
+      });
+    }
+  };
+
+  return (
+    <section id="hero" style={{ position: 'relative' }}>
     {/* Immersive Background Image Wrapper with mask fade */}
     <div style={{
       position: 'absolute',
@@ -70,10 +95,10 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => (
       {/* Quick Contact Info - Now placed before actions */}
       <FadeIn delay={0.4}>
         <div className="hero-contact-info" style={{ display: 'flex', gap: '24px', marginBottom: '32px', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-          <a href="mailto:info@buzzbuild.nl" style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.8, transition: 'all 0.2s' }}>
+          <a href="mailto:info@buzzbuild.nl" onClick={handleEmailClick} style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.8, transition: 'all 0.2s' }}>
             <MailIcon /> info@buzzbuild.nl
           </a>
-          <a href="tel:+31638715895" style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.8, transition: 'all 0.2s' }}>
+          <a href="tel:+31638715895" onClick={handlePhoneClick} style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.8, transition: 'all 0.2s' }}>
             <PhoneIcon /> +31 6 38 71 58 95
           </a>
         </div>
@@ -111,4 +136,5 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => (
       </FadeIn>
     </div>
   </section>
-);
+  );
+};

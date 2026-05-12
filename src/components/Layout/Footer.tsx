@@ -7,13 +7,26 @@ interface FooterProps {
   handleNavClick: (e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>, target: string) => void;
 }
 
-export const Footer = ({ t, handleNavClick }: FooterProps) => (
-  <footer className="footer">
+export const Footer = ({ t, handleNavClick }: FooterProps) => {
+  const handlePhoneClick = () => {
+    console.log("Telefoon knop aangeklikt in Footer, gtag checken...");
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'phone_click', {
+        'send_to': 'AW-18038797105',
+        'event_callback': () => {
+          console.log("Google heeft de conversie (telefoon) succesvol ontvangen!");
+        }
+      });
+    }
+  };
+
+  return (
+    <footer className="footer">
     <div className="container">
       <div className="footer-content">
         <div className="footer-left">
           <div>
-            <a href="tel:+31638715895" className="btn btn-primary" style={{ padding: '10px 24px', opacity: 0.9 }}>
+            <a href="tel:+31638715895" onClick={handlePhoneClick} className="btn btn-primary" style={{ padding: '10px 24px', opacity: 0.9 }}>
               {t.footer.btnBuzz}
             </a>
           </div>
@@ -30,4 +43,5 @@ export const Footer = ({ t, handleNavClick }: FooterProps) => (
       </div>
     </div>
   </footer>
-);
+  );
+};
