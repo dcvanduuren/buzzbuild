@@ -7,11 +7,18 @@ export const WhatsAppButton = () => {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    console.log("WhatsApp knop aangeklikt, gtag checken...");
     if (typeof window !== 'undefined' && (window as any).gtag) {
+      console.log("gtag gevonden! Event wordt verstuurd.");
       (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-18038797105/3YUtCOHdwascELHmyJlD'
+        'send_to': 'AW-18038797105/3YUtCOHdwascELHmyJlD',
+        'event_callback': () => {
+          console.log("Google heeft de conversie succesvol ontvangen!");
+        }
       });
+    } else {
+      console.error("Gtag is niet geladen op deze pagina!");
     }
   };
 
