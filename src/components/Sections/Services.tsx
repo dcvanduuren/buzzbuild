@@ -5,8 +5,24 @@ interface ServicesProps {
   mailtoLink: string;
 }
 
-export const Services = ({ t, mailtoLink }: ServicesProps) => (
-  <section id="diensten" className="section-padding">
+export const Services = ({ t, mailtoLink }: ServicesProps) => {
+  const handleEmailClick = () => {
+    console.log("Email knop aangeklikt, gtag checken...");
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      console.log("gtag gevonden! Event wordt verstuurd.");
+      (window as any).gtag('event', 'email_click', {
+        'send_to': 'AW-18038797105',
+        'event_callback': () => {
+          console.log("Google heeft de conversie (email) succesvol ontvangen!");
+        }
+      });
+    } else {
+      console.error("Gtag is niet geladen op deze pagina!");
+    }
+  };
+
+  return (
+    <section id="diensten" className="section-padding">
     <div className="container">
       <div className="section-header text-center">
         <h2 style={{ fontSize: '2.5rem' }}>{t.services.title}</h2>
@@ -42,7 +58,7 @@ export const Services = ({ t, mailtoLink }: ServicesProps) => (
             ))}
           </ul>
 
-          <a href={mailtoLink} className="btn btn-outline" style={{ width: '100%' }}>
+          <a href={mailtoLink} className="btn btn-outline" style={{ width: '100%' }} onClick={handleEmailClick}>
             {t.services.btnEmail}
           </a>
         </div>
@@ -75,11 +91,12 @@ export const Services = ({ t, mailtoLink }: ServicesProps) => (
             ))}
           </ul>
 
-          <a href={mailtoLink} className="btn btn-primary" style={{ width: '100%' }}>
+          <a href={mailtoLink} className="btn btn-primary" style={{ width: '100%' }} onClick={handleEmailClick}>
             {t.services.btnEmail}
           </a>
         </div>
       </div>
     </div>
   </section>
-);
+  );
+};
