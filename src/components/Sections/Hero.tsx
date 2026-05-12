@@ -13,8 +13,8 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => {
   const handleEmailClick = () => {
     console.log("Email link aangeklikt in Hero, gtag checken...");
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'email_click', {
-        'send_to': 'AW-18038797105',
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18038797105/8-FxCPCk86scELHmyJlD',
         'event_callback': () => {
           console.log("Google heeft de conversie (email) succesvol ontvangen!");
         }
