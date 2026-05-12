@@ -10,8 +10,8 @@ export const Services = ({ t, mailtoLink }: ServicesProps) => {
     console.log("Email knop aangeklikt, gtag checken...");
     if (typeof window !== 'undefined' && (window as any).gtag) {
       console.log("gtag gevonden! Event wordt verstuurd.");
-      (window as any).gtag('event', 'email_click', {
-        'send_to': 'AW-18038797105',
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18038797105/bdaHCKqNi6wcELHmyJlD',
         'event_callback': () => {
           console.log("Google heeft de conversie (email) succesvol ontvangen!");
         }
