@@ -25,8 +25,10 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => {
   const handlePhoneClick = () => {
     console.log("Telefoon link aangeklikt in Hero, gtag checken...");
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'phone_click', {
-        'send_to': 'AW-18038797105',
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18038797105/IDGlCNzniqwcELHmyJlD',
+        'value': 1.0,
+        'currency': 'EUR',
         'event_callback': () => {
           console.log("Google heeft de conversie (telefoon) succesvol ontvangen!");
         }

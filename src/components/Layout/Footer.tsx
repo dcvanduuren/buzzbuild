@@ -11,8 +11,10 @@ export const Footer = ({ t, handleNavClick }: FooterProps) => {
   const handlePhoneClick = () => {
     console.log("Telefoon knop aangeklikt in Footer, gtag checken...");
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'phone_click', {
-        'send_to': 'AW-18038797105',
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18038797105/IDGlCNzniqwcELHmyJlD',
+        'value': 1.0,
+        'currency': 'EUR',
         'event_callback': () => {
           console.log("Google heeft de conversie (telefoon) succesvol ontvangen!");
         }
