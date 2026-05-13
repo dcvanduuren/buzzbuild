@@ -70,7 +70,7 @@ function App() {
         handleNavClick={handleNavClick} 
       />
       <div style={{ position: 'relative', zIndex: 2 }}>
-        <SchemaManager />
+        <SchemaManager lang={lang} />
       <main>
         <Hero t={t} handleNavClick={handleNavClick} />
         <Mission t={t} />

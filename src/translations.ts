@@ -7,6 +7,10 @@ export const translations = {
             diensten: 'Diensten',
             over: 'Over Ons'
         },
+        seo: {
+            title: 'Buzzbuild | Aannemer & badkamer renovaties Eindhoven',
+            description: 'Buzzbuild is de betrouwbare aannemer in Eindhoven, gespecialiseerd in hoogwaardige badkamerrenovaties, duurzame verbouwingen en timmerwerk op maat.'
+        },
         hero: {
             title: 'Aannemersbedrijf gespecialiseerd in hoogwaardige badkamer renovaties in Eindhoven en omstreken',
             subtitle: 'We komen graag vrijblijvend langs om de mogelijkheden voor jouw project te bespreken.',
@@ -184,6 +188,10 @@ export const translations = {
             resultaten: 'Results',
             diensten: 'Services',
             over: 'About Us'
+        },
+        seo: {
+            title: 'Buzzbuild | Premium Bathroom Renovations & Contractor Eindhoven',
+            description: 'Buzzbuild is your reliable premium contractor in Eindhoven, specializing in high-end bathroom renovations and expert construction for expats.'
         },
         hero: {
             title: 'Contracting company specializing in high-quality bathroom renovations in Eindhoven and surroundings',

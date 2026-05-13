@@ -1,7 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { translations, SupportedLang } from '../../translations';
 
-export const SchemaManager: React.FC = () => {
+interface SchemaManagerProps {
+    lang: SupportedLang;
+}
+
+export const SchemaManager: React.FC<SchemaManagerProps> = ({ lang }) => {
+    const t = translations[lang];
     const schema = {
         "@context": "https://schema.org",
         "@graph": [
@@ -9,8 +15,8 @@ export const SchemaManager: React.FC = () => {
                 "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
                 "name": "Buzzbuild",
                 "image": "https://buzzbuild.nl/assets/images/Logo.png",
-                "description": "Hét aannemersbedrijf gespecialiseerd in luxe badkamer renovaties en bouwprojecten in regio Eindhoven.",
-                "url": "https://buzzbuild.nl",
+                "description": t.seo.description,
+                "url": lang === 'nl' ? "https://buzzbuild.nl" : "https://buzzbuild.nl/en",
                 "telephone": "+31638715895",
                 "address": {
                     "@type": "PostalAddress",
@@ -44,8 +50,14 @@ export const SchemaManager: React.FC = () => {
 
     return (
         <Helmet>
-            <title>Buzzbuild | Aannemer & badkamer renovaties Eindhoven</title>
-            <meta name="description" content="Buzzbuild is de betrouwbare aannemer in Eindhoven, gespecialiseerd in hoogwaardige badkamerrenovaties, duurzame verbouwingen en timmerwerk op maat." />
+            <title>{t.seo.title}</title>
+            <meta name="description" content={t.seo.description} />
+            
+            {/* International SEO / Hreflang Tags */}
+            <link rel="alternate" hrefLang="nl" href="https://buzzbuild.nl/" />
+            <link rel="alternate" hrefLang="en" href="https://buzzbuild.nl/en" />
+            <link rel="alternate" hrefLang="x-default" href="https://buzzbuild.nl/" />
+
             <script type="application/ld+json">
                 {JSON.stringify(schema)}
             </script>
