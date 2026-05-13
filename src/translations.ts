@@ -192,16 +192,16 @@ export const translations = {
             btnWork: 'Our Work'
         },
         mission: {
-            title: 'All-round contractor',
+            title: 'Premium Contracting Services',
             subtitle: 'Specialized in high-end bathroom renovations in the Eindhoven region.',
-            body: 'At Buzzbuild, we tackle every renovation project with the same dedication. We combine our broad construction expertise with a specific, sharp focus on bathrooms. For you in Eindhoven, Veldhoven, Best, Nuenen, Geldrop, Helmond, and Valkenswaard, this means: one reliable contractor for the entire house, honest advice, and a flawless finish for your dream bathroom.'
+            body: 'At Buzzbuild, we tackle every renovation project with Expert Craftsmanship and the Seamless Execution of High-End Designs. We combine our broad construction expertise with a specific, sharp focus on luxury bathrooms. For you in Eindhoven, Veldhoven, Best, Nuenen, Geldrop, Helmond, and Valkenswaard, this means: one reliable contractor for your entire home, honest advice, and a flawless finish for your dream bathroom. We are fully fluent in English and Dutch, ensuring smooth communication throughout your entire project.'
         },
         values: {
             title: 'Our Core Values',
             subtitle: 'We stand for quality, clear communication, sustainability, all-in-one service, and reliability.',
             cards: [
                 { 
-                    title: 'Craftsmanship & Quality', 
+                    title: 'Expert Craftsmanship', 
                     bullets: [
                         'Visibly better results through precision.',
                         'Durable materials for a long lifespan.'
@@ -272,7 +272,7 @@ export const translations = {
             subtitle: 'From transforming your bathroom to a full home renovation, we offer clear and honest pricing options.',
             btnEmail: 'Email Us',
             card1: {
-                title: 'Hourly Basis',
+                title: 'Hourly Rate',
                 price: '€60',
                 from: 'From:',
                 unit: '/Hour',
@@ -285,7 +285,7 @@ export const translations = {
                 ]
             },
             card2: {
-                title: 'Project Basis',
+                title: 'Fixed Project Price',
                 price: 'On request',
                 from: 'Project Price:',
                 body: 'For larger projects, we offer a detailed quote with a fixed price. This ensures transparency and financial security.',
@@ -299,7 +299,7 @@ export const translations = {
         },
         team: {
             title: 'Our Team',
-            subtitle: 'Meet our team that proudly transforms your bathroom and home.',
+            subtitle: 'Meet our Young Professional Team that proudly transforms your bathroom and home.',
             founder: 'Founder'
         },
         footer: {

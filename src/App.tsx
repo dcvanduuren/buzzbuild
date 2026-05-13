@@ -19,8 +19,20 @@ import './index.css';
 import { WhatsAppButton } from './components/UI/WhatsAppButton';
 
 function App() {
-  const [lang, setLang] = useState<SupportedLang>('nl');
+  const [lang, setLang] = useState<SupportedLang>(() => {
+    return window.location.pathname.startsWith('/en') ? 'en' : 'nl';
+  });
   const t = translations[lang];
+
+  React.useEffect(() => {
+    // Sync language state with URL
+    const currentPath = window.location.pathname;
+    if (lang === 'en' && !currentPath.startsWith('/en')) {
+      window.history.replaceState(null, '', '/en' + window.location.hash);
+    } else if (lang === 'nl' && currentPath.startsWith('/en')) {
+      window.history.replaceState(null, '', '/' + window.location.hash);
+    }
+  }, [lang]);
 
   React.useEffect(() => {
     // Handle initial hash in URL
