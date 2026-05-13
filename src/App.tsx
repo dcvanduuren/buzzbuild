@@ -22,6 +22,20 @@ function App() {
   const [lang, setLang] = useState<SupportedLang>('nl');
   const t = translations[lang];
 
+  React.useEffect(() => {
+    // Handle initial hash in URL
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500); // Small delay to ensure all components are rendered
+    }
+  }, []);
+
   const handleNavClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
