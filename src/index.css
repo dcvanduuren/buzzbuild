@@ -686,8 +686,8 @@ ul.bullet-list li {
 
 @media (max-width: 768px) {
   .header-wrapper {
-    width: calc(100% - 56px);
-    max-width: none;
+    width: 88%;
+    max-width: 340px;
   }
 
   .container {
