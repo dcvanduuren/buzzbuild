@@ -79,7 +79,7 @@ export const BackgroundGradientAnimation = ({
     <div
       className={containerClassName}
       style={{
-        position: "fixed",
+        position: "absolute",
         inset: 0,
         overflow: "hidden",
         zIndex: 1,
