@@ -20,11 +20,20 @@ export const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: Heade
 
   return (
     <div className="header-wrapper">
-      <header className="header">
+      <header className="header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
         {/* Left: Logo */}
-        <div className="logo-container" onClick={(e) => onNavClick(e, 'hero')}>
+        <div className="logo-container" onClick={(e) => onNavClick(e, 'hero')} style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
           <LogoIcon />
         </div>
+
+        {/* Center: Hamburger (Mobile) */}
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu">
+          <svg width="36" height="20" viewBox="0 0 36 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <line x1="2" y1="10" x2="34" y2="10"></line>
+            <line x1="2" y1="3" x2="34" y2="3"></line>
+            <line x1="2" y1="17" x2="34" y2="17"></line>
+          </svg>
+        </button>
 
         {/* Center: Desktop Nav */}
         <nav className={`main-nav ${menuOpen ? 'mobile-open' : ''}`}>
@@ -36,16 +45,7 @@ export const Header = ({ lang, setLang, t, whatsappLink, handleNavClick }: Heade
         </nav>
 
         {/* Right: Actions */}
-        <div className="header-actions">
-          {/* Hamburger (Mobile Only) */}
-          <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu">
-            <svg width="36" height="20" viewBox="0 0 36 20" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <line x1="2" y1="10" x2="34" y2="10"></line>
-              <line x1="2" y1="3" x2="34" y2="3"></line>
-              <line x1="2" y1="17" x2="34" y2="17"></line>
-            </svg>
-          </button>
-
+        <div className="header-actions" style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
           <button
             className="lang-toggle"
             style={{ color: 'var(--text-main)', fontSize: '0.85rem' }}
