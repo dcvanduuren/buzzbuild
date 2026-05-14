@@ -1,8 +1,6 @@
 import React from 'react';
 import { TranslationData } from '../../translations';
-import { TrustBadges } from '../Conversion/TrustBadges';
 import { DownArrow, MailIcon, PhoneIcon } from '../UI/Icons';
-import { FadeIn } from '../UI/FadeIn';
 
 interface HeroProps {
   t: TranslationData;
@@ -86,7 +84,7 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => {
 
       <p className="hero-subtitle animate-fade-in-up" style={{ color: 'var(--text-muted)', maxWidth: '700px', margin: '0 0 32px 0', lineHeight: '1.6', opacity: 0.8, animationDelay: '0.3s' }}>
         {t.hero.subtitle}
-      </p
+      </p>
 
       {/* Quick Contact Info - Now placed before actions */}
       <div className="hero-contact-info animate-fade-in-up" style={{ display: 'flex', gap: '24px', marginBottom: '32px', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '0.05em', textTransform: 'uppercase', animationDelay: '0.4s' }}>
