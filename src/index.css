@@ -853,11 +853,11 @@ ul.bullet-list li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 24px;
+    padding: 10px 48px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-full);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    min-width: 80px; /* Wider button to fill space */
+    min-width: 140px; /* Much wider button with extra whitespace */
   }
 
   .main-nav {
