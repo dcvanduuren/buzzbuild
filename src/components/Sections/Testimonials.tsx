@@ -104,21 +104,32 @@ export const Testimonials = ({ t }: TestimonialsProps) => {
   useEffect(() => {
     let animationId: number;
     const container = containerRef.current;
+    if (!container) return;
+    
+    let thirdWidth = container.scrollWidth / 3;
+
+    const resizeObserver = new ResizeObserver(() => {
+      thirdWidth = container.scrollWidth / 3;
+    });
+    resizeObserver.observe(container);
     
     const animate = () => {
-      if (container && !isDragging && !isHovering) {
+      if (!isDragging && !isHovering) {
         container.scrollLeft += 0.5;
         
-        // Reset scroll position to create infinite effect
-        if (container.scrollLeft >= container.scrollWidth / 3) {
-          container.scrollLeft = 0;
+        // Reset scroll position to create infinite effect without querying scrollWidth
+        if (container.scrollLeft >= thirdWidth) {
+          container.scrollLeft -= thirdWidth;
         }
       }
       animationId = requestAnimationFrame(animate);
     };
 
     animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
+    return () => {
+      cancelAnimationFrame(animationId);
+      resizeObserver.disconnect();
+    };
   }, [isDragging, isHovering]);
 
   const onMouseDown = (e: React.MouseEvent) => {

@@ -74,13 +74,11 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => {
     <div className="container hero-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
       
       {/* Stylized Logo Title */}
-      <FadeIn delay={0.1}>
         <div className="hero-title-wrapper" style={{ marginBottom: '24px' }}>
           <div className="title-font hero-title">
             <span style={{ color: 'var(--accent-primary)' }}>Buzz</span>build
           </div>
         </div>
-      </FadeIn>
 
       <FadeIn delay={0.2}>
         <h1 className="hero-h1" style={{ color: 'var(--text-main)', fontWeight: '600', maxWidth: '800px', margin: '0 0 16px 0', lineHeight: '1.5' }}>
