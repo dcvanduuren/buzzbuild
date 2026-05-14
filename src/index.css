@@ -55,6 +55,7 @@ html {
   color: var(--text-main);
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-y: scroll;
 }
 
 body {

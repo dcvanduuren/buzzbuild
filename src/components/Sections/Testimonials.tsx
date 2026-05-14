@@ -106,10 +106,15 @@ export const Testimonials = ({ t }: TestimonialsProps) => {
     const container = containerRef.current;
     if (!container) return;
     
-    let thirdWidth = container.scrollWidth / 3;
+    let thirdWidth = 0;
+
+    // Defer measurement to avoid forced reflow on mount
+    setTimeout(() => {
+      if (container) thirdWidth = container.scrollWidth / 3;
+    }, 500);
 
     const resizeObserver = new ResizeObserver(() => {
-      thirdWidth = container.scrollWidth / 3;
+      if (container) thirdWidth = container.scrollWidth / 3;
     });
     resizeObserver.observe(container);
     
