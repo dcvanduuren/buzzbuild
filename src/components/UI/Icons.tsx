@@ -4,7 +4,9 @@ export const LogoIcon = () => (
   <img 
     src="/assets/images/Logo.webp" 
     alt="Buzzbuild Logo" 
-    className="header-logo-icon" 
+    className="header-logo-icon"
+    width="38"
+    height="38"
   />
 );
 

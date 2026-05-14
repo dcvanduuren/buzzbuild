@@ -34,7 +34,7 @@ export const Mission = ({ t }: MissionProps) => (
           border: '1px solid rgba(255, 255, 255, 0.2)' // Enhanced silver lining
         }}>
           <img
-            src="/assets/images/optimized/handshake.webp"
+            src="/assets/images/optimized/handshake-opt.webp"
             alt="Persoonlijke aanpak: Handdruk Buzzbuild"
             loading="lazy"
             style={{ 
