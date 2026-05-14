@@ -2,14 +2,29 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18038797105"></script>
+  <!-- Optimized Google tag (gtag.js) loading -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-18038797105');
+    const loadGTM = () => {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18038797105';
+      document.head.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18038797105');
+      
+      // Cleanup
+      window.removeEventListener('scroll', loadGTM);
+      window.removeEventListener('mousemove', loadGTM);
+      window.removeEventListener('touchstart', loadGTM);
+    };
+    window.addEventListener('scroll', loadGTM, { passive: true });
+    window.addEventListener('mousemove', loadGTM, { passive: true });
+    window.addEventListener('touchstart', loadGTM, { passive: true });
   </script>
   <meta charset="UTF-8" />
   
@@ -21,8 +36,10 @@
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
   </noscript>
-  <!-- Preload custom primary font to fix LCP delay -->
+  <!-- Preload LCP assets -->
   <link rel="preload" href="/fonts/etna-free-font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/images/badkamer 3/4.webp" as="image" type="image/webp">
+  
   <link rel="icon" type="image/webp" href="/assets/images/Logo.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
