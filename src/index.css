@@ -745,8 +745,8 @@ ul.bullet-list li {
     height: auto !important; /* Allow expansion on mobile */
     align-items: center !important;
     text-align: center;
-    padding-top: 120px !important; /* More top space for header */
-    padding-bottom: 100px !important; /* More bottom space for arrow visibility */
+    padding-top: 60px !important; /* Less top space to move content up */
+    padding-bottom: 120px !important; /* More bottom space to push content up */
     overflow: visible !important;
   }
 
