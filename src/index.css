@@ -706,7 +706,16 @@ ul.bullet-list li {
     transform: translateY(-2px);
   }
 
+  .google-badge-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
 @media (max-width: 768px) {
+  .google-badge-wrapper {
+    justify-content: center;
+  }
+
   .header-wrapper {
     width: 82%;
     max-width: 310px;
