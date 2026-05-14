@@ -5,14 +5,14 @@ import { translations, SupportedLang } from './translations';
 import { SchemaManager } from './components/SEO/SchemaManager';
 import { Header } from './components/Layout/Header';
 import { Hero } from './components/Sections/Hero';
-const Mission = React.lazy(() => import('./components/Sections/Mission').then(m => ({ default: m.Mission })));
-const Projects = React.lazy(() => import('./components/Sections/Projects').then(m => ({ default: m.Projects })));
-const Values = React.lazy(() => import('./components/Sections/Values').then(m => ({ default: m.Values })));
-const Testimonials = React.lazy(() => import('./components/Sections/Testimonials').then(m => ({ default: m.Testimonials })));
-const Services = React.lazy(() => import('./components/Sections/Services').then(m => ({ default: m.Services })));
-const FAQ = React.lazy(() => import('./components/UI/FAQ').then(m => ({ default: m.FAQ })));
-const Team = React.lazy(() => import('./components/Sections/Team').then(m => ({ default: m.Team })));
-const Footer = React.lazy(() => import('./components/Layout/Footer').then(m => ({ default: m.Footer })));
+import { Mission } from './components/Sections/Mission';
+import { Projects } from './components/Sections/Projects';
+import { Values } from './components/Sections/Values';
+import { Testimonials } from './components/Sections/Testimonials';
+import { Services } from './components/Sections/Services';
+import { FAQ } from './components/UI/FAQ';
+import { Team } from './components/Sections/Team';
+import { Footer } from './components/Layout/Footer';
 import { BackgroundGlows } from './components/Layout/BackgroundGlows';
 import './index.css';
 
@@ -73,19 +73,15 @@ function App() {
         <SchemaManager lang={lang} />
       <main>
         <Hero t={t} handleNavClick={handleNavClick} />
-        <React.Suspense fallback={null}>
-          <Mission t={t} />
-          <Projects t={t} />
-          <Values t={t} />
-          <Testimonials t={t} />
-          <Services t={t} mailtoLink={mailtoLink} />
-          <FAQ t={t} />
-          <Team t={t} />
-        </React.Suspense>
+        <Mission t={t} />
+        <Projects t={t} />
+        <Values t={t} />
+        <Testimonials t={t} />
+        <Services t={t} mailtoLink={mailtoLink} />
+        <FAQ t={t} />
+        <Team t={t} />
       </main>
-      <React.Suspense fallback={null}>
-        <Footer t={t} handleNavClick={handleNavClick} />
-      </React.Suspense>
+      <Footer t={t} handleNavClick={handleNavClick} />
       </div>
       <Analytics />
       <SpeedInsights />
