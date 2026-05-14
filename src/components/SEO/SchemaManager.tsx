@@ -14,7 +14,7 @@ export const SchemaManager: React.FC<SchemaManagerProps> = ({ lang }) => {
             {
                 "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
                 "name": "Buzzbuild",
-                "image": "https://buzzbuild.nl/assets/images/Logo.png",
+                "image": "https://buzzbuild.nl/assets/images/Logo.webp",
                 "description": t.seo.description,
                 "url": lang === 'nl' ? "https://buzzbuild.nl" : "https://buzzbuild.nl/en",
                 "telephone": "+31638715895",

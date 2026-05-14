@@ -2,7 +2,7 @@ import React from 'react';
 
 export const LogoIcon = () => (
   <img 
-    src="/assets/images/Logo.png" 
+    src="/assets/images/Logo.webp" 
     alt="Buzzbuild Logo" 
     className="header-logo-icon" 
   />

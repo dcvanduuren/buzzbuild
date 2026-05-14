@@ -12,7 +12,14 @@
     gtag('config', 'AW-18038797105');
   </script>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/assets/images/Logo.png" />
+  
+  <!-- Preconnect to Google Fonts for faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Preload custom primary font to fix LCP delay -->
+  <link rel="preload" href="/fonts/etna-free-font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/webp" href="/assets/images/Logo.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Buzzbuild | Aannemer & Badkamer Renovatie Eindhoven</title>
@@ -24,7 +31,7 @@
       "@context": "https://schema.org",
       "@type": "GeneralContractor",
       "name": "Buzzbuild",
-      "image": "https://buzzbuild.nl/assets/images/Logo.png",
+      "image": "https://buzzbuild.nl/assets/images/Logo.webp",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Eindhoven",
