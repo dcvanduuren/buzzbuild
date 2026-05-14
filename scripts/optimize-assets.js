@@ -3,28 +3,40 @@ import fs from 'fs';
 import path from 'path';
 
 async function optimizeImages() {
-  const logoIn = path.join(process.cwd(), 'public', 'assets', 'images', 'Logo.png');
-  const logoOut = path.join(process.cwd(), 'public', 'assets', 'images', 'Logo.webp');
-  
-  if (fs.existsSync(logoIn)) {
-    console.log('Optimizing Logo.png...');
-    await sharp(logoIn)
-      .resize({ width: 200, height: 200, fit: 'inside' })
-      .webp({ quality: 80 })
-      .toFile(logoOut);
-    console.log('Created Logo.webp');
+  // Logo
+  const logoPath = path.join(process.cwd(), 'public', 'assets', 'images', 'Logo.webp');
+  if (fs.existsSync(logoPath)) {
+    console.log('Optimizing Logo.webp...');
+    const inBuf = fs.readFileSync(logoPath);
+    const buffer = await sharp(inBuf).resize(76, 76).webp({ quality: 80 }).toBuffer();
+    fs.writeFileSync(logoPath, buffer);
   }
 
-  const handshakePath = path.join(process.cwd(), 'public', 'assets', 'images', 'optimized', 'handshake.webp');
-  const handshakeOut = path.join(process.cwd(), 'public', 'assets', 'images', 'optimized', 'handshake-opt.webp');
+  // Handshake
+  const handshakePath = path.join(process.cwd(), 'public', 'assets', 'images', 'optimized', 'handshake-opt.webp');
   if (fs.existsSync(handshakePath)) {
-    console.log('Optimizing handshake.webp...');
-    await sharp(handshakePath)
-      .resize({ width: 800, height: 800, fit: 'inside' })
-      .webp({ quality: 80 })
-      .toFile(handshakeOut);
-    
-    console.log('Created handshake-opt.webp');
+    console.log('Optimizing handshake-opt.webp...');
+    const inBuf = fs.readFileSync(handshakePath);
+    const buffer = await sharp(inBuf).webp({ quality: 65 }).toBuffer();
+    fs.writeFileSync(handshakePath, buffer);
+  }
+
+  // Badkamer 1 thumb
+  const b1Thumb = path.join(process.cwd(), 'public', 'assets', 'images', 'optimized', 'badkamer 1', '1-thumb.webp');
+  if (fs.existsSync(b1Thumb)) {
+    console.log('Optimizing badkamer 1/1-thumb.webp...');
+    const inBuf = fs.readFileSync(b1Thumb);
+    const buffer = await sharp(inBuf).resize({ width: 512 }).webp({ quality: 80 }).toBuffer();
+    fs.writeFileSync(b1Thumb, buffer);
+  }
+
+  // Badkamer 2 thumb
+  const b2Thumb = path.join(process.cwd(), 'public', 'assets', 'images', 'optimized', 'badkamer 2', 'Manon 1-thumb.webp');
+  if (fs.existsSync(b2Thumb)) {
+    console.log('Optimizing badkamer 2/Manon 1-thumb.webp...');
+    const inBuf = fs.readFileSync(b2Thumb);
+    const buffer = await sharp(inBuf).resize({ width: 512 }).webp({ quality: 80 }).toBuffer();
+    fs.writeFileSync(b2Thumb, buffer);
   }
 }
 
