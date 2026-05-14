@@ -7,6 +7,7 @@ export const LogoIcon = () => (
     className="header-logo-icon"
     width="38"
     height="38"
+    fetchPriority="high"
   />
 );
 
