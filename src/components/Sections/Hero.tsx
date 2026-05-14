@@ -130,7 +130,7 @@ export const Hero = ({ t, handleNavClick }: HeroProps) => {
       justifyContent: 'center' 
     }}>
       <FadeIn delay={1} direction="none" duration={1}>
-        <a href="#missie" onClick={(e) => handleNavClick(e, 'missie')} className="animate-bounce">
+        <a href="#missie" onClick={(e) => handleNavClick(e, 'missie')} className="animate-bounce" aria-label="Scroll naar missie sectie">
           <DownArrow />
         </a>
       </FadeIn>

@@ -467,7 +467,7 @@ section {
 
 .btn-primary {
   background-color: var(--accent-primary);
-  color: #fff;
+  color: var(--bg-primary);
   box-shadow: 0 4px 15px rgba(255, 145, 77, 0.15);
 }
 
