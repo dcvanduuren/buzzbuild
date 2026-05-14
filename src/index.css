@@ -433,7 +433,8 @@ section {
   justify-content: center;
   position: relative;
   overflow: visible !important;
-  padding-bottom: 4vh;
+  padding-top: 100px;
+  padding-bottom: 180px;
 }
 
 /* Utilities */
