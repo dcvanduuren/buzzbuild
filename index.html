@@ -2,29 +2,14 @@
 <html lang="en" style="background-color: #071C2E;">
 
 <head>
-  <!-- Optimized Google tag (gtag.js) loading -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18038797105"></script>
   <script>
-    const loadGTM = () => {
-      if (window.gtmLoaded) return;
-      window.gtmLoaded = true;
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18038797105';
-      document.head.appendChild(script);
-      
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18038797105');
-      
-      // Cleanup
-      window.removeEventListener('scroll', loadGTM);
-      window.removeEventListener('mousemove', loadGTM);
-      window.removeEventListener('touchstart', loadGTM);
-    };
-    window.addEventListener('scroll', loadGTM, { passive: true });
-    window.addEventListener('mousemove', loadGTM, { passive: true });
-    window.addEventListener('touchstart', loadGTM, { passive: true });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18038797105');
   </script>
   <meta charset="UTF-8" />
   
